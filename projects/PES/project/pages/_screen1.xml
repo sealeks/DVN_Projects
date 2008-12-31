@@ -1,6 +1,11 @@
 <?xml-stylesheet href="../web-utils/lib.xsl" type="text/xsl"?><svg:svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mlib="http://dvnci/mlib" xmlns:elib="http://dvnci/elib" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="root" width="1920" height="1080" style="background-color: #222;">
     <!--svg:image x="0" y="0" width="1920" height="1080" href="screen1_3.svg" fill="" rotate=""/-->
-    <svg:rect x="5" y="129" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect4"/><svg:rect x="5" y="49" width="90" height="75" fill="#444" stroke="#eee" stroke-width="1" id="rect3"/><svg:rect x="1825" y="36" width="90" height="80" fill="#444" stroke="#eee" stroke-width="1" id="rect2"/><svg:rect x="1625" y="6" width="290" height="25" fill="#222" stroke="#eee" stroke-width="1" id="rect1" rx="3" ry="3"/><svg:rect x="5" y="4" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect0"/><svg:text x="666" y="89" text="Р3/2" fill="gray" id="text0" filter="" class="elec_f_on"/>
+    <svg:rect x="5" y="129" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect4"/>
+    <svg:rect x="5" y="49" width="90" height="75" fill="#444" stroke="#eee" stroke-width="1" id="rect3"/>
+    <svg:rect x="1825" y="36" width="90" height="80" fill="#444" stroke="#eee" stroke-width="1" id="rect2"/>
+    <svg:rect x="1625" y="6" width="290" height="25" fill="#222" stroke="#eee" stroke-width="1" id="rect1" rx="3" ry="3"/>
+    <svg:rect x="5" y="4" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect0"/>
+    <svg:text x="666" y="89" text="Р3/2" fill="gray" id="text0" filter="" class="elec_f_on"/>
     <svg:text x="717" y="63" text="В3" fill="gray" id="text3" filter="" class="elec_f_on"/>
     <svg:text x="817" y="63" text="В4" fill="gray" id="text6" filter="" class="elec_f_on"/>
     <svg:text x="887" y="62" text="В11" fill="gray" id="text7" filter="" class="elec_f_on"/>

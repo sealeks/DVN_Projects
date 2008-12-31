@@ -1565,9 +1565,6 @@
     <elib:switcher id="polygon62" x="173" y="891" width="25" height="25" environment="kU10" type="station" pos="tp426" header="ТП426"/>
     <elib:switcher x="1081" y="246" height="25" width="25" id="V64" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn63" roff="" initstate="on" header="ВН63"/>
     <elib:switcher id="polygon39" x="114" y="717" width="25" height="25" environment="kU6" type="station" pos="tp227" header="ТП227"/>
-    
-    
-    
     <elib:epath stroke-width="2" d=" M1239,226h26" stroke="#bbb" id="epath175" environment="kUKbl" state="1" visible=""/>
     <elib:switcher x="1245" y="228" height="25" width="25" id="V154" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rz28" roff="" initstate="on" header="Р28"/>
     <svg:text id="text489" x="1252" y="221" class="elec_f_on" text="Р28"/>
@@ -1583,4 +1580,11 @@
     <elib:epath stroke-width="4" d=" M1253,394v10" stroke="#bbb" id="epath327" environment="kU400" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1265,281h20v116h-26" stroke="#bbb" id="epath328" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1267,280a6,6 6 0,1 -12 0" stroke="#bbb" id="epath329" environment="kU6" state="1" visible=""/>
-<svg:rect x="1828" y="127" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect0"/><svg:rect x="1828" y="47" width="90" height="75" fill="#444" stroke="#eee" stroke-width="1" id="rect1"/><svg:rect x="1828" y="2" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect2"/><mlib:button id="button0" x="1833" y="48" height="35" width="80" r="2" caption="Журнал" onclick="formclose('journal1');formopen('journal');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/><mlib:button id="button1" x="1832" y="7" height="30" width="80" r="2" caption="Выход" onclick="exit();" color1="#F00" color2="#A00" fontstyle="fill: white; font-size: 12px; font-weight: bold;" kind="red"/><mlib:button id="button3" x="1833" y="82" height="35" width="80" r="2" caption="Экран 3" onclick="formopen('screen3');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/><elib:switcher x="1856" y="130" height="30" width="30" id="switcher28" type="breakg" captionstyle="fill: yellow; stroke:none;" pos="jlog"/></svg:svg>
+    <svg:rect x="1828" y="127" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect0"/>
+    <svg:rect x="1828" y="47" width="90" height="75" fill="#444" stroke="#eee" stroke-width="1" id="rect1"/>
+    <svg:rect x="1828" y="2" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect2"/>
+    <mlib:button id="button0" x="1833" y="48" height="35" width="80" r="2" caption="Журнал" onclick="formclose('journal1');formopen('journal');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/>
+    <mlib:button id="button1" x="1832" y="7" height="30" width="80" r="2" caption="Выход" onclick="exit();" color1="#F00" color2="#A00" fontstyle="fill: white; font-size: 12px; font-weight: bold;" kind="red"/>
+    <mlib:button id="button3" x="1833" y="82" height="35" width="80" r="2" caption="Экран 3" onclick="formopen('screen3');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/>
+    <elib:switcher x="1856" y="130" height="30" width="30" id="switcher28" type="breakg" captionstyle="fill: yellow; stroke:none;" pos="jlog"/>
+</svg:svg>
