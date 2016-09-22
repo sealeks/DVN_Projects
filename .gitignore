@@ -1,0 +1,17 @@
+*.zip
+*.war
+install/bin/
+install/install_out/
+projects/WEBT1/webt1/build/
+projects/PES/chrome/nbproject/private/
+projects/WEBT1/webt1/nbproject/private/
+projects/PRSNT/presentation/nbproject/private/
+/projects/WEBT2/webT2/nbproject/private/
+**/web-utils/
+/**/web-utils/
+**/web-utils
+/**/web-utils
+web-utils/
+web-utils/*
+/projects/chrome-app/nbproject/private/
+project/build

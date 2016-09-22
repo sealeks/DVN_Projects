@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    width="100"
+    height="100"
+    viewBox="0 0 100 100" >
+    
+    <!--rect x="0" y="0" width="100" height="100" stroke-width="0" fill="red" /-->
+    
+    <path d="M 30,5 h 40 v 90 h -40 v -95"  fill="none" stroke-width="10" stroke="black"/>
+    <path d="M 50,0 v 100" fill="none" stroke-width="10" stroke="black"/>    
+
+</svg>

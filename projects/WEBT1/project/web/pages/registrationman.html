@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" media="all" type="text/css" href="../web-utils/js_ext/jqueryui/jquery-ui.css" />
+        
+        <script type="text/javascript" src="../web-utils/js/libutil.js"></script>
+        <script type="text/javascript" src="../web-utils/js/database.js"></script>     
+        <script type="text/javascript" src="../web-utils/js_ext/jquery/jquery.js"></script>
+        <script type="text/javascript" src="../web-utils/js_ext/jqueryui/jquery-ui.min.js"></script> 
+        <style>
+            body { font-size: 62.5%; }
+            label, input { display:block; }
+            input.text { margin-bottom:12px; width:95%; padding: .4em; }
+            fieldset { padding:0; border:0; margin-top:25px; }
+            td { padding:0px; margin:0px;}     
+            h1 { font-size: 1.2em; margin: .6em 0; }
+            div#users-contain { width: 100%; margin: 20px 0; }
+            div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+            div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }   
+            .ui-dialog .ui-state-error { padding: .3em; }
+            .validateTips { border: 1px solid transparent; padding: 0.3em; }
+            #access {  width: 95%; } 
+        </style>
+        <script>
+
+
+
+            function  progress_show(msg) {
+                if (msg) {
+                    $('#runmodal').dialog({
+                        modal: true,
+                        resizable: false,
+                        closeOnEscape: false,
+                        disabled: true,
+                        title: msg
+                    });
+                }
+                else {
+                    $('#runmodal').dialog('close');
+                    $('#runmodal').dialog('destroy');
+                }
+            }
+
+            function  error_show(msg) {
+                if (msg) {
+                    $('#runmodalalert').dialog({
+                        modal: true,
+                        resizable: false,
+                        closeOnEscape: false,
+                        disabled: true,
+                        title: 'Ошибка',
+                        dialogClass: "alert",
+                        buttons: {
+                            "Выход": function () {
+                                error_show()
+                            }
+                        }
+                    });
+                    $('#alerttext').html(msg);
+                }
+                else {
+                    $('#alerttext').html(msg);
+                    $('#runmodalalert').dialog('close');
+                    $('#runmodalalert').dialog('destroy');
+                }
+            }
+
+            function  confirm_show(msg, fn, cfn) {
+                if (msg) {
+                    $('#dialog-confirm').dialog({
+                        modal: true,
+                        resizable: false,
+                        closeOnEscape: false,
+                        disabled: true,
+                        title: 'Запрос',
+                        dialogClass: "alert",
+                        buttons: {
+                            "Ok": function () {
+                                confirm_clear();
+                                if (fn)
+                                   fn();
+                            },
+                            "Отмена": function () {
+                                confirm_clear();
+                                if (cfn)
+                                    cfn();
+                            }
+                        }
+                    });
+                    $('#confirmtext').html(msg);
+                }
+                else {
+                    confirm_clear();
+                }
+            }
+
+            function  confirm_clear() {
+                $('#confirmtext').html('');
+                $('#dialog-confirm').dialog('close');
+                $('#dialog-confirm').dialog('destroy');
+            }
+
+            function  conv_access(access) {
+                return access ? ((access < 1000) ? 0 : 
+                        ((access > 1000) ? 10000 : 1000)) : 0;
+            }                        
+
+
+            function deleteuser(el, usr) {
+                confirm_show('Удалить пользователя ' + usr + '?',
+                        function () {
+                            progress_show('Удаление пользователя ' + usr + '?');
+                            $$removeuser(function () {
+                                if (event.error) {
+                                    progress_show();
+                                    error_show('Ошибка удаления пользователя ' + usr + '?');
+                                }
+                                else {
+                                    progress_show();
+                                    $(el.parentNode.parentNode).remove();
+                                }
+                            }
+                            , usr, "");
+                        });
+            }
+            
+            function changeaccessuser(el, usr) {
+                        var newval=el.val();
+                        var oldval=el.attr('value');
+                        confirm_show('Сменить уровень доступа пользователя ' + usr + '?',
+                        function () {
+                            progress_show('Смена уровеня доступа');
+                            $$changeuseraccess(function () {
+                                if (event.error) {
+                                    progress_show();
+                                    error_show('Ошибка смены уровня доступа пользователя');
+                                    el.val(oldval);
+                                    select_access_option(el);
+                                    $(el).selectmenu("refresh");
+                                }
+                                else {
+                                    progress_show();
+                                }
+                            }
+                            , usr, newval);
+                        },
+                        function () {  
+                           el.val(oldval);
+                           select_access_option(el);
+                           $(el).selectmenu("refresh");
+                        });     
+                        
+            }            
+
+            function set_access_option(context) {
+                $(".accselop", context).append('<option value="0">Нулевой</option>');
+                $(".accselop", context).append('<option value="1000">Оператор</option>');
+                $(".accselop", context).append('<option value="10000">Администратор</option>');
+                select_access_option(context);
+            }
+
+            function select_access_option(context) {
+                $("select.accselop[value] > option[value]", context).removeAttr('selected');
+                $("select.accselop[value='0'] > option[value='0']", context).attr('selected', 'selected');
+                $("select.accselop[value='1000'] > option[value='1000']", context).attr('selected', 'selected');
+                $("select.accselop[value='10000'] > option[value='10000']", context).attr('selected', 'selected');   
+            }
+
+            $(function () {
+
+                var dialog, form,
+                        name = $("#name"),
+                        password = $("#password"),
+                        access = $("#access");
+
+
+                function addUser() {
+                    var valid = true;
+                    if (valid) {
+                        createuser(name.val(), password.val(), access.val())
+                    }
+                    return valid;
+                }
+
+                dialog = $("#dialog-form").dialog({
+                    autoOpen: false,
+                    height: 320,
+                    width: 350,
+                    modal: true,
+                    buttons: {
+                        "Ok": addUser,
+                        Cancel: function () {
+                            dialog.dialog("Закрыть");
+                        }
+                    },
+                    close: function () {
+                        form[ 0 ].reset();
+                    }
+                });
+
+                form = dialog.find("form").on("submit", function (event) {
+                    event.preventDefault();
+                    addUser();
+                });
+
+                $("#create-user").button().on("click", function () {
+                    dialog.dialog("open");
+                });
+
+                $("#exit").button().on("click", function () {
+                    formclose('registrationman');
+                });
+
+                function createuser(user, password, access) {
+                    if (user) {
+                        dialog.dialog("close");
+                        progress_show('Добавление пользователя');
+                        $$adduser(function () {
+                            if (event.error) {
+                                progress_show();
+                                if (event.error == 274)
+                                    error_show('Пользователь "' + user + '" уже существует!');
+                                else
+                                    error_show('Ошибка добавления пользователя');
+                            }
+                            else {
+                                var newel = $("#users tbody").prepend("<tr>" +
+                                        "<td>" + user + "</td>" +
+                                        "<td><select class=" + '"' + "accselop" + '"' + " value=" + '"' +
+                                        conv_access(access) + '"' + 
+                                        ">" + "</select></td>" +
+                                        "<td><button class=" + '"' + "delbtn" + '"' + " onclick=" + '"' + 
+                                        "deleteuser(this,'" + user + 
+                                        "')" + '"' + "/>" + "</td>" +
+                                        "</tr>");
+                                set_access_option(newel);
+                                $(".delbtn").button({
+                                    text: false,
+                                    label: "Удалить",
+                                    icons: {
+                                        primary: "ui-icon-close"
+                                    }});
+                                $(".accselop", newel).selectmenu({
+                                        change: function(event, ui) {
+                                            var selel=ui.item.element.parent();
+                                            var trel=selel.parent().parent();
+                                            changeaccessuser(selel, $('td:first',trel).html());
+                                        }}
+                                );                                
+
+                                progress_show();
+                            }
+                        }
+                        , user, password, access);
+                    }
+                    else
+                        dialog.dialog("close");
+                }
+
+
+                
+                access.val(1000);
+                set_access_option(access);
+                access.selectmenu();
+
+                //window.alert(Date());
+                setTimeout(function(){
+                progress_show('Загрузка пользователей');
+                $$users(function () {
+                    if (event.error) {
+                        progress_show();
+                    }
+                    else {
+                        if (event.list && event.list.length) {
+                            for (var i = 0; i < event.list.length; i++) {
+                                $("#users tbody").append("<tr>" +
+                                        "<td>" + event.list[i].name + "</td>" +
+                                        "<td><select class=" + '"' + "accselop" + '"' + " value=" + '"' +
+                                        conv_access(event.list[i].type) +
+                                        '"' + ">" + "</select></td>" +
+                                        "<td><button class=" + '"' + "delbtn" + '"' + " onclick=" + '"' +
+                                        "deleteuser(this,'" + event.list[i].name + "')" + '"' + "/>" + "</td>" +
+                                        "</tr>");
+                            }                             
+                            $(".delbtn").button({
+                                text: false,
+                                label: "Удалить",
+                                icons: {
+                                    primary: "ui-icon-close"
+                                }});
+                            set_access_option();
+                            $(".accselop", $("#users tbody")).selectmenu({
+                                        change: function(event, ui) {
+                                            var selel=ui.item.element.parent();
+                                            var trel=selel.parent().parent();
+                                            changeaccessuser(selel, $('td:first',trel).html());
+                                        }}
+                             ); 
+                            $('#access').selectmenu('refresh'); 
+                            progress_show();
+                        }
+                    }
+                });
+                }, 200);
+
+
+            });
+        </script>
+    </head>
+    <body>
+
+        <div  id="runmodal" style='display:none'>
+            <image src="../web-utils/css/res/throbber.svg"/>
+        </div>
+        <div  id="runmodalalert" style='display:none'>
+            <div id="alerttext"></div>
+        </div>
+        <div id="dialog-confirm" title="" style='display:none'>
+            <p id="confirmtext">
+                <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>        
+            </p>
+        </div>    
+
+        <div id="dialog-form" title="Создать нового пользователя">
+            <p class="validateTips"></p>
+
+            <form>
+                <fieldset>
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" id="name" value="Диспетчер" class="text ui-widget-content ui-corner-all">    
+                    <label for="password">Пароль</label>
+                    <input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all">      
+                    <label for="name">Доступ</label>
+                    <select  class="text ui-widget-content ui-corner-all accselop" id="access" value="1000"/>
+                    <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                </fieldset>
+            </form>
+        </div>
+
+
+        <div id="users-contain" class="ui-widget">
+            <button id="create-user">Создать нового</button>
+            <button id="exit">Выход</button>
+            <h1>Существующие пользователи:</h1>
+            <table id="users" class="ui-widget ui-widget-content">
+                <thead>
+                    <tr class="ui-widget-header ">
+                        <th>Имя</th>
+                        <th>Уровень</th>
+                        <th>-</th>        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </body>
+</html>

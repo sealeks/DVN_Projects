@@ -1,0 +1,19 @@
+<svg:svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mlib="http://dvnci/mlib" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" width="100%" height="100%" style="background-color: #ccc"
+onload=" try{ this.image = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+         document.documentElement.appendChild(this.image);
+         var rect = document.documentElement.getBoundingClientRect();
+         var w = rect.width ? rect.width : 1920;
+         var h = rect.height ?  rect.height : 1080;
+         
+         var sz = w &lt; h ? w : h;
+         var size = sz / 10;
+         var x = (w - rect.left) / 2 -size/2;
+         var y = (h - rect.top) / 2 -size/2;
+         this.image.setAttribute('x', x );
+         this.image.setAttribute('y', y );
+         this.image.setAttribute('width', size );
+         this.image.setAttribute('height', size );         
+         this.image.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '../web-utils/css/res/throbber.svg' );} catch(error){ }">
+
+    
+</svg:svg>

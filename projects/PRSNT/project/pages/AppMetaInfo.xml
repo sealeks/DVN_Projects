@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta DBProvider="1" constring="host=localhost;database=test_1;user=postgres;password=1324" host="">
+	<HomeList key="0">
+		<ReportArr />
+	</HomeList>
+	<TrendList key="0">
+		<TrendHeader name="Физические характеристики">
+			<TrendArr name="Давления">
+				<trend tg="sys::pg0" />
+				<trend tg="sys::p1" />
+				<trend tg="sys::p2" />
+                                <trend tg="sys::p3" />
+                                <trend tg="sys::p4" />
+                                <trend tg="sys::p5" />
+                                <trend tg="sys::p6" />
+                                <trend tg="sys::p8" />
+                                <trend tg="sys::p9" />
+			</TrendArr>
+			<TrendArr name="Температуры">
+				<trend tg="sys::t1" />
+				<trend tg="sys::ta2" />
+				<trend tg="sys::td1" />
+                                <trend tg="sys::td2" />
+                                <trend tg="sys::td3" />
+                                <trend tg="sys::td4" />
+                                <!--trend tg="sys::td5" /-->
+                                <!--trend tg="sys::tg1" />
+                                <trend tg="sys::tp1" />
+                                <trend tg="sys::tp2" /-->
+                                <trend tg="sys::tp3" />
+                                <trend tg="sys::tp4" />  
+                                <!--trend tg="sys::tw1" /-->
+                                <trend tg="sys::tw4" />                                
+                                <trend tg="sys::tw5" />                                 
+			</TrendArr>
+			<TrendArr name="Расходы">
+				<trend tg="sys::fg" />
+				<trend tg="sys::fw" />
+				<trend tg="sys::fpp" />                            
+			</TrendArr>
+			<TrendArr name="Уровни">
+				<trend tg="sys::l" />                       
+			</TrendArr>                        
+			<TrendArr name="Положения">
+				<trend tg="sys::prz_pos" />
+				<!--trend tg="sys::prz1_pos" />
+				<trend tg="sys::prz2_pos" /--> 
+				<trend tg="sys::nav_pos" />                                 
+                                <!--trend tg="sys::sh1_pos" /> 
+                                <trend tg="sys::sh2_pos" /--> 
+                                <trend tg="sys::nad_pos" /> 
+                                <trend tg="sys::ru_pos" /> 
+                                <trend tg="sys::rtp_pos" /> 
+			</TrendArr> 
+                </TrendHeader>                         
+		<TrendHeader name="Среды"> 
+			<TrendArr name="Газ">
+				<trend tg="sys::fg" />
+				<trend tg="sys::pg0" />
+				<trend tg="sys::p1" /> 
+                                <trend tg="sys::p2" />
+                                <trend tg="sys::prz_pos" />
+			</TrendArr>   
+			<TrendArr name="Воздух">
+				<trend tg="sys::p5" />
+				<trend tg="sys::p2" />
+				<trend tg="sys::p3" /> 
+                                <trend tg="sys::ta2" />
+                                <trend tg="sys::nav_pos" />
+			</TrendArr> 
+			<TrendArr name="Дым">
+				<trend tg="sys::p6" />
+				<trend tg="sys::td1" />
+                                <trend tg="sys::td2" />
+                                <trend tg="sys::td3" />
+                                <trend tg="sys::td4" />
+                                <trend tg="sys::nad_pos" />
+			</TrendArr>  
+			<TrendArr name="Вода">
+				<trend tg="sys::fw" />
+				<trend tg="sys::tw4" />
+                                <trend tg="sys::tw5" />
+                                <trend tg="sys::l" />
+                                <trend tg="sys::ru_pos" />
+                                <trend tg="sys::rtp_pos" />
+			</TrendArr> 
+			<TrendArr name="Пар">
+                                <trend tg="sys::fpp" />
+				<trend tg="sys::p8" />
+				<trend tg="sys::p9" />
+                                <trend tg="sys::t1" />
+                                <trend tg="sys::tp3" />
+                                <trend tg="sys::tp4" />  
+                                <trend tg="sys::rtp_pos" />
+			</TrendArr>                          
+		</TrendHeader>
+		<TrendHeader name="Регуляторы"> 
+			<TrendArr name="Регулятор P газа">
+				<trend tg="sys::pg0" />
+                                <trend tg="sys::prz_pos" />
+			</TrendArr>   
+			<TrendArr name="Регулятор нагрузки">
+				<trend tg="sys::p8" />
+                                <trend tg="sys::prz_pos" />
+			</TrendArr> 
+			<TrendArr name="Регулятор P воздуха">
+				<trend tg="sys::p5" />
+                                <trend tg="sys::nav_pos" />
+			</TrendArr>
+			<TrendArr name="Регулятор разрежения">
+				<trend tg="sys::p6" />
+                                <trend tg="sys::nad_pos" />
+			</TrendArr>  
+			<TrendArr name="Регулятор уровня">
+				<trend tg="sys::l" />
+                                <trend tg="sys::ru_pos" />
+			</TrendArr>                           
+			<TrendArr name="Регулятор температуры пара">
+				<trend tg="sys::t1" />
+                                <trend tg="sys::rtp_pos" />
+			</TrendArr>                          
+		</TrendHeader>                 
+	</TrendList>
+    <ReportList>
+        <ReportHeader color="" fontsize="" name="Общий" textcolor="">
+            <ReportArr delt="0" group="1" height="250" name="Минутные расходы " sum="1" type="3" width="100" initperiod="" subperiod="" autoprint="" autoclose="">
+                <unit round="1" sumtype="1" tg="rpt::l_min"/>
+                <unit round="1" sumtype="1" tg="rpt::tw4_min"/>
+                <unit round="1" sumtype="1" tg="rpt::tw5_min"/>
+                <unit round="1" sumtype="1" tg="rpt::ta2_min"/>
+                <unit round="1" sumtype="1" tg="rpt::p5_min"/>
+                <unit round="1" sumtype="1" tg="rpt::fg_min"/>
+                <unit round="1" sumtype="1" tg="rpt::pg0_min"/>
+                <unit round="1" sumtype="1" tg="rpt::fpp_min"/>
+                <unit round="1" sumtype="1" tg="rpt::p8_min"/>
+                <unit round="1" sumtype="1" tg="rpt::t1_min"/>
+            </ReportArr>
+            <ReportArr delt="0" group="1" height="250" name="Часовые расходы " sum="1" type="5" width="100" initperiod="" subperiod="" autoprint="" autoclose="">
+                <unit round="1" sumtype="1" tg="rpt::l_h"/>
+                <unit round="1" sumtype="1" tg="rpt::tw4_h"/>
+                <unit round="1" sumtype="1" tg="rpt::tw5_h"/>
+                <unit round="1" sumtype="1" tg="rpt::ta2_h"/>
+                <unit round="1" sumtype="1" tg="rpt::p5_h"/>
+                <unit round="1" sumtype="1" tg="rpt::fg_h"/>
+                <unit round="1" sumtype="1" tg="rpt::pg0_h"/>
+                <unit round="1" sumtype="1" tg="rpt::fpp_h"/>
+                <unit round="1" sumtype="1" tg="rpt::p8_h"/>
+                <unit round="1" sumtype="1" tg="rpt::t1_h"/>
+            </ReportArr>     
+            <ReportArr delt="0" group="1" height="250" name="Суточные расходы " sum="1" type="6" width="100" initperiod="" subperiod="" autoprint="" autoclose="">
+                <unit round="1" sumtype="1" tg="rpt::l_d"/>
+                <unit round="1" sumtype="1" tg="rpt::tw4_d"/>
+                <unit round="1" sumtype="1" tg="rpt::tw5_d"/>
+                <unit round="1" sumtype="1" tg="rpt::ta2_d"/>
+                <unit round="1" sumtype="1" tg="rpt::p5_d"/>
+                <unit round="1" sumtype="1" tg="rpt::fg_d"/>
+                <unit round="1" sumtype="1" tg="rpt::pg0_d"/>
+                <unit round="1" sumtype="1" tg="rpt::fpp_d"/>
+                <unit round="1" sumtype="1" tg="rpt::p8_d"/>
+                <unit round="1" sumtype="1" tg="rpt::t1_d"/>
+            </ReportArr>             
+        </ReportHeader>
+        <ReportHeader color="" fontsize="" name="Общий" textcolor="">
+            <ReportArr delt="0" group="1" height="250" name="Минутные расходы " sum="1" type="3" width="100" initperiod="" subperiod="" autoprint="" autoclose="">
+                <unit round="1" sumtype="1" tg="rpt::l_min"/>
+                <unit round="1" sumtype="1" tg="rpt::tw4_min"/>
+                <unit round="1" sumtype="1" tg="rpt::tw5_min"/>
+                <unit round="1" sumtype="1" tg="rpt::ta2_min"/>
+                <unit round="1" sumtype="1" tg="rpt::p5_min"/>
+                <unit round="1" sumtype="1" tg="rpt::fg_min"/>
+                <unit round="1" sumtype="1" tg="rpt::pg0_min"/>
+                <unit round="1" sumtype="1" tg="rpt::fpp_min"/>
+                <unit round="1" sumtype="1" tg="rpt::p8_min"/>
+                <unit round="1" sumtype="1" tg="rpt::t1_min"/>
+            </ReportArr>
+            <ReportArr delt="0" group="1" height="250" name="Часовые расходы " sum="1" type="5" width="100" initperiod="" subperiod="" autoprint="" autoclose="">
+                <unit round="1" sumtype="1" tg="rpt::l_h"/>
+                <unit round="1" sumtype="1" tg="rpt::tw4_h"/>
+                <unit round="1" sumtype="1" tg="rpt::tw5_h"/>
+                <unit round="1" sumtype="1" tg="rpt::ta2_h"/>
+                <unit round="1" sumtype="1" tg="rpt::p5_h"/>
+                <unit round="1" sumtype="1" tg="rpt::fg_h"/>
+                <unit round="1" sumtype="1" tg="rpt::pg0_h"/>
+                <unit round="1" sumtype="1" tg="rpt::fpp_h"/>
+                <unit round="1" sumtype="1" tg="rpt::p8_h"/>
+                <unit round="1" sumtype="1" tg="rpt::t1_h"/>
+            </ReportArr>     
+            <ReportArr delt="0" group="1" height="250" name="Суточные расходы " sum="1" type="6" width="100" initperiod="" subperiod="" autoprint="" autoclose="">
+                <unit round="1" sumtype="1" tg="rpt::l_d"/>
+                <unit round="1" sumtype="1" tg="rpt::tw4_d"/>
+                <unit round="1" sumtype="1" tg="rpt::tw5_d"/>
+                <unit round="1" sumtype="1" tg="rpt::ta2_d"/>
+                <unit round="1" sumtype="1" tg="rpt::p5_d"/>
+                <unit round="1" sumtype="1" tg="rpt::fg_d"/>
+                <unit round="1" sumtype="1" tg="rpt::pg0_d"/>
+                <unit round="1" sumtype="1" tg="rpt::fpp_d"/>
+                <unit round="1" sumtype="1" tg="rpt::p8_d"/>
+                <unit round="1" sumtype="1" tg="rpt::t1_d"/>
+            </ReportArr>      
+        </ReportHeader>        
+    </ReportList>    
+	<MessageList />
+</meta>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" media="all" type="text/css" href="../web-utils/js_ext/jqueryui/jquery-ui.css" />
+
+    <style >
+
+        html, body {
+            font-size: 12px;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #aaa;
+        }
+
+        .parent {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: auto;
+        }
+
+        .block {
+            width: 350px;
+            height: 250px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;}
+
+        .blockw {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;}        
+
+        p {
+            text-align: center;
+        }
+
+        #login {
+            width: 100%;
+        }
+
+        #password {
+            width: 100%;
+        }  
+
+        label, input, select { display:block; }
+        input.text, select.text { margin-bottom:12px; width:95%; padding: .4em; }
+        fieldset { padding:0; border:0; margin-top:25px; }
+
+    </style>     
+
+    <script type="text/javascript" src="../web-utils/js/libutil.js"></script>
+    <script type="text/javascript" src="../web-utils/js_ext/jquery/jquery.js"></script>
+    <script type="text/javascript" src="../web-utils/js_ext/jqueryui/jquery-ui.min.js"></script>  
+
+
+    <script type="text/javascript">
+
+function  progress_show(msg) {
+    if (msg) {
+        $('#runmodal').dialog({
+            modal: true,
+            resizable: false,
+            closeOnEscape: false,
+            disabled: true,
+            title: msg
+        });
+    }
+    else {
+        $('#runmodal').dialog('close');
+        $('#runmodal').dialog('destroy');
+    }
+}
+
+function  error_show(msg) {
+    if (msg) {
+        $('#runmodalalert').dialog({
+            modal: true,
+            resizable: false,
+            closeOnEscape: false,
+            disabled: true,
+            title: 'Ошибка',
+            dialogClass: "alert",
+            buttons: {
+                "Выход": function () {
+                    error_show()
+                }
+            }
+        });
+        $('#alerttext').html(msg);
+    }
+    else {
+        $('#alerttext').html(msg);
+        $('#runmodalalert').dialog('close');
+        $('#runmodalalert').dialog('destroy');
+    }
+}
+
+function  confirm_show(msg, fn, cfn) {
+    if (msg) {
+        $('#dialog-confirm').dialog({
+            modal: true,
+            resizable: false,
+            closeOnEscape: false,
+            disabled: true,
+            title: 'Запрос',
+            dialogClass: "alert",
+            buttons: {
+                "Ok": function () {
+                    confirm_clear();
+                    if (fn)
+                        fn();
+                },
+                "Отмена": function () {
+                    confirm_clear();
+                    if (cfn)
+                        cfn();
+                }
+            }
+        });
+        $('#confirmtext').html(msg);
+    }
+    else {
+        confirm_clear();
+    }
+}
+
+
+
+
+
+$(function () {
+
+    var dialog, form,
+            login = $('#login'),
+            password = $("#password"),
+            passwordlab = $("#passwordlab"),
+            changepass = $('#changepass'),
+            password0 = $("#password0"),
+            password1 = $("#password1"),
+            password2 = $("#password2"),
+            submit = $('#submit'),
+            unsubmit = $('#unsubmit'),
+            cancel = $('.cancel');
+
+    submit.button().on('click',
+            function () {
+                if (login.val()) {
+                    $$registuser(
+                            function () {
+                                if (event.error) {
+                                    error_show('Неверный пароль');
+                                }
+                                else {
+                                    formclose('registration');
+                                    close();
+                                }
+                            },
+                            login.val(),
+                            password.val())
+                }
+            });
+
+    dialog = $("#dialog-form").dialog({
+        autoOpen: false,
+        height: 320,
+        width: 300,
+        modal: true,
+        buttons: {
+            "Ok": changePassword,
+            Cancel: function () {
+                dialog.dialog("Закрыть");
+            }
+        },
+        close: function () {
+            form[ 0 ].reset();
+        }
+    });
+
+    cancel.button().on('click', function () {
+        formclose('registration');
+    });
+
+    unsubmit.button().on('click', function () {
+        $$unregistuser(
+                function () {
+                    login.val('');
+                    login.selectmenu("refresh");
+                    set_state();
+                });
+    });
+
+    changepass.button().on('click', function () {
+        dialog.dialog("open");
+    });
+    
+
+    form = dialog.find("form").on("submit", function (event) {
+        event.preventDefault();
+        addUser();
+    });    
+
+    login.selectmenu();
+    unsubmit.hide();
+    changepass.hide();
+
+
+
+    function changePassword() {
+        if (password1.val() == password2.val()) {
+            changepassword(login.val(), password0.val(), password1.val());
+        }
+        else {
+            dialog.dialog("close");
+            error_show('Повтор пароля не совпадает с изначальным!');
+        }
+    }
+
+    function changepassword(user, oldpassword, newpassword) {
+        dialog.dialog("close");
+        progress_show('Смена пароля пользователя ' + user + ' !');
+        $$changeuserpassword(function () {
+            if (event.error) {
+                progress_show();
+                error_show('Ошибка смены пароля!');
+            }
+            else {
+                progress_show();
+            }
+        }, user, oldpassword, newpassword);
+    }
+
+    function set_state(reg) {
+        if (reg) {
+            submit.hide();
+            unsubmit.show();
+            changepass.show();
+            login.selectmenu("disable");
+            password.hide();
+            passwordlab.hide();
+        }
+        else {
+            unsubmit.hide();
+            changepass.hide();
+            submit.show();
+            login.selectmenu("enable");
+            password.show();
+            passwordlab.show();
+        }
+    }
+
+    setTimeout(function () {
+        progress_show('Загрузка списка пользователей');
+        $$users(function () {
+            if (event.error) {
+                progress_show();
+                error_show('Ошибка загрузки списка пользователей');
+            }
+            else {
+                if (event.list.length) {
+                    var option = document.createElement("option");
+                    option.text = '';
+                    login.append(option);
+                    for (var i = 0; i < event.list.length; i++) {
+                        var option = document.createElement("option");
+                        option.text = event.list[i].name;
+                        login.append(option);
+                    }
+                    setTimeout(function () {
+                        $$('user', function () {
+                            if (event.error) {
+                                progress_show();
+                                error_show('Ошибка загрузки списка пользователей');
+                            }
+                            else {
+                                if (event.value == '') {
+                                    set_state();
+                                }
+                                else {
+                                    login.val(event.value);
+                                    login.selectmenu("refresh");
+                                    set_state(1);
+                                }
+                            }
+                            progress_show();
+                        });
+                    }, 100);
+                }
+                else {
+                    progress_show();
+                    error_show('Список пользователей пуст');
+                }
+            }
+        })
+    }, 200);
+
+})
+    </script>
+
+
+</head>
+<body>
+
+    <div  id="runmodal" style='display:none'>
+        <image src="../web-utils/css/res/throbber.svg"/>
+    </div>
+    <div  id="runmodalalert" style='display:none'>
+        <div id="alerttext"></div>
+    </div>
+    <div id="dialog-confirm" title="" style='display:none'>
+        <p id="confirmtext">
+            <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>        
+        </p>
+    </div>  
+
+    <div id="dialog-form" title="Смена пароля" style='display:none'>           
+        <form>  
+            <fieldset>
+                <label for="password">Старый пароль</label>
+                <input type="password" name="password" id="password0" value="" class="text ui-widget-content ui-corner-all">                
+                <label for="password">Новый пароль</label>
+                <input type="password" name="password" id="password1" value="" class="text ui-widget-content ui-corner-all">      
+                <label for="password">Повтор пароля</label>
+                <input type="password" name="password" id="password2" value="" class="text ui-widget-content ui-corner-all">  
+            </fieldset>
+        </form>
+    </div>    
+
+    <div class="parent" id="registrate">
+        <div class="block">
+                <label for="login">Имя</label>
+                <select  id="login" class="text ui-widget-content ui-corner-all"></select>
+
+                <label for="password" id="passwordlab" >Пароль:</label>
+                <input id="password" type="password" name="password" class="text ui-widget-content ui-corner-all">
+
+            <p id="alarm" class="alarm" style="display: none">
+            </p>
+            <p>
+                <button id="submit">Регистрация</button>
+                <button id="unsubmit" >Рaзрегистрация</button>
+                <button id="changepass" >Смена пароля</button>                
+                <button class="cancel" >Выход</button>          
+            </p>
+        </div>
+    </div>       
+
+
+</body>
+</html>

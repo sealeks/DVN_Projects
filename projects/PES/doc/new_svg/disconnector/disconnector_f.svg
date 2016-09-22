@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    width="100"
+    height="100"
+    viewBox="0 0 100 100">
+    <rect x="30"  y="0" width="40" height="10" stroke-width="0"/>
+    <rect x="30" y="90" width="40" height="10" stroke-width="0" />
+    <!--rect x="45" y="20" width="10" height="60" stroke-width="0"/-->
+    <!--rect x="20" y="45" width="60" height="10" stroke-width="0"/-->
+    <!--text  x="50" y="80" style="font-size:80;font-weight:bold;text-anchor:middle">P</text-->
+    <!--text  x="50" y="80" style="font-size:80;font-weight:bold;text-anchor:middle">?</text-->
+</svg>

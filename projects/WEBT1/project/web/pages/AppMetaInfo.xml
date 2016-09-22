@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta DBProvider="1" constring="host=localhost;database=trend;user=postgres;password=1324" host="">
+	<HomeList key="0">
+		<ReportArr />
+	</HomeList>
+	<TrendList key="0">
+            
+	</TrendList>
+    <ReportList>       
+    </ReportList>    
+	<MessageList />
+</meta>

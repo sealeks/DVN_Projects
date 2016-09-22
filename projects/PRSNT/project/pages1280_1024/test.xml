@@ -1,0 +1,43 @@
+<?xml-stylesheet href="../web-utils/lib.xsl" type="text/xsl"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mlib="http://dvnci/mlib" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="root" width="100%" height="100%" style="background-color: #bbb;" fillcolor1="#0e0" color1="#333" fillcolor2="#0a0" fillenvironment="" color2="#001" y="0" x="0" on="1" param="level_d">
+    
+    
+    
+   
+    
+    
+    
+    
+    
+    <mlib:armatura x="156" y="354" height="50" width="50" id="armatura1" type="regul" position="out_pos" on="out_pos&gt;0" oncolor="" offcolor="" environment="water" rotate="0" auto="auto"/>
+    <mlib:rect x="284" y="128" height="200" width="200" stroke="#050" r="4" stroke-width="1" id="rect0" color1="#222" color2="#888" direction="bt" param="" fillcolor1="#088" fillcolor2="#0bb" gradient-type="tb"/>
+    <mlib:sensor x="158" y="211" height="20" width="80" stroke="#088" stroke-width="1" r="4" id="sensor0" format="%9.1f см" param="level" sensorevent="graph" fontcolor="#0cc" color1="" color2="" environment="dark_blue"/>
+    <mlib:armatura x="522" y="45" height="50" width="50" id="armatura0" type="regul" position="in_pos" on="in_pos&gt;0" oncolor="" offcolor="" environment="water" rotate="0"/>
+    <mlib:regulator x="523" y="46" height="50" width="50" id="regulator0" param="level" actuator="in_pos" actuator-sp="in_sp" header="Задвижка" param-sp="" auto="" param-format="%3.1f" param-color="" period="600" actuator-format="%9.0f %%" param-environment="water" param-color2=""/> 
+    <mlib:path stroke-width="4" d=" M196,388 h 100 c 0 0 10 0 0 -10 v -50" id="path0" stroke="#099" filter="filter1" on="level"/>
+    <mlib:path stroke-width="4" d=" M65,388 h 100" id="path1" stroke="#099" filter="filter1" on="level &amp;&amp; out_pos"/>
+    <mlib:path stroke-width="4" d=" M471,127  v -50 c 0 0 0 -10 10 0 h 50" id="path2" stroke="#099" filter="filter1" on="in_pos"/>
+    <mlib:sensor x="215" y="347" height="20" width="60" stroke="#0d0" stroke-width="1" r="4" id="sensor1" format="%9.0f %%" param="out_pos" sensorevent="graph" fontcolor="#0d0" color1="" color2="" fontstyle="font-size: 11'" environment="dark_gray"/>
+    <mlib:sensor x="578" y="35" height="20" width="60" stroke="#0d0" stroke-width="1" r="4" id="sensor2" format="%9.0f %%" param="in_pos" sensorevent="graph" fontcolor="#0d0" color1="" color2="" fontstyle="font-size: 11'" environment="dark_gray"/>
+    <svg:path d=" M547,47 l 30,0 m -25 5 l -5 -5 5 -5" stroke-width="2" stroke="#0b0" fill="none" transform="translate(0,0)" id="path4"/>
+    <svg:path d=" M185,357 l 30,0 m -25 5 l -5 -5 5 -5" stroke-width="2" stroke="#0b0" fill="none" transform="" id="path5"/>
+    
+    
+    
+    
+    
+    
+    <mlib:rect x="222" y="207" height="40" width="190" stroke="#eee" r="4" stroke-width="1" id="rect1" color1="#AAA" color2="#EEE" direction="" param="level" fillcolor1="#088" fillcolor2="#0bb" gradient-type="" fillenvironment="water" rotate="-90" environment="dark_gray"/>
+    <svg:path d=" M237,222 l 50,0 0,2 4,0 0,-4 -4,0 0,2" stroke-width="1" stroke="#088" fill="none" transform="translate(0,0)" id="path6"/>
+    <mlib:regulator x="156" y="352" height="50" width="50" id="regulator1" param="level" actuator="out_pos" actuator-sp="out_sp" header="Регулятор" param-sp="level_sp" auto="auto" param-format="%9.1f см" param-color="" period="600" param-color2="" actuator-format="%9.0f %%" config="level_p, level_i ,level_d" config-formats="%3.2f,%3.2f,%3.2f" config-headers="kp,ki,kd" config-header="Уставки регулятора L" param-environment="water"/>
+    
+    
+    <mlib:path stroke-width="4" d=" M563,76 h 100 c 0 0 10 0 0 -10 v -50" id="path7" stroke="#099" filter="filter1" on="level"/>
+    
+    
+    
+    
+    
+    
+    
+    
+<mlib:button id="button0" x="7" y="4" height="35" width="155" r="3" caption="Выход" onclick="exit();" color1="#F00" color2="#A00" fontstyle="fill: white; font-size: 12px; font-weight: bold;" kind="red"/><mlib:button id="button1" x="1609" y="878" height="35" width="155" r="3" caption="R" onclick="formopen('gazblock');" color1="#003" color2="#006" fontstyle="fill: white; font-size: 12px; font-weight: bold;"/></svg>

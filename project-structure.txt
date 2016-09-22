@@ -1,0 +1,4 @@
+/
+/base/        - memory mapped project file
+/utils/           - js, xslt and other library
+/config/     -config files (config.xsl) - project specific files

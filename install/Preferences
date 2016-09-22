@@ -1,0 +1,6 @@
+{
+   "session": {
+      "restore_on_startup": 4,
+      "urls_to_restore_on_startup": [ "file:///F:/DVN_Projects/projects/PES/chrome/pages/start.xml" ]
+   }
+}
