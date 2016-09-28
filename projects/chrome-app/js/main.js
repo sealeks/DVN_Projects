@@ -42,7 +42,7 @@ Background.prototype.newWindow = function() {
     win.onClosed.addListener(this.onWindowClosed.bind(this, win));
   }.bind(this));
 
-  var options2 = {
+ /* var options2 = {
     id: 'appWindowId002',
     frame: (this.ifShowFrame_() ? 'chrome' : 'none'),
         top: 0,
@@ -54,45 +54,36 @@ Background.prototype.newWindow = function() {
   chrome.app.window.create('screen2.html', options2, function(win) {
     console.log('Window opened:', win);
     win.onClosed.addListener(this.onWindowClosed.bind(this, win));
-  }.bind(this));    
+  }.bind(this));*/    
 };
 
-/**
- * @param {Object.<string, Object>} launchData
- * Handle onLaunch event.
- */
-Background.prototype.launch = function(launchData) {
-  var entries = [];
-  chrome.storage.local.get('retainedEntryIds', function(data) {
-    var retainedEntryIds = data['retainedEntryIds'] || [];
-    for (var i = 0; i < retainedEntryIds.length; i++) {
-      chrome.fileSystem.restoreEntry(retainedEntryIds[i], function(entry) {
-        this.entriesToOpen_.push(entry);
-      }.bind(this));
-    }
-  }.bind(this));
 
-  if (launchData && launchData['items']) {
-    for (var i = 0; i < launchData['items'].length; i++) {
-      entries.push(launchData['items'][i]['entry']);
-    }
-  }
+Background.prototype.launch = function(launchData) {
+    chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+        //alert("message received to background =", message);
+        console.log("message received to background =", message);
+        switch (message) {
+            case  '$$exit' :
+            {
+                console.log("need exit");
+                var wns = chrome.app.window.getAll();
+                for (var i = 0; i < wns.length; ++i)
+                    wns[i].close()
+                break;
+            }
+            default:
+            {
+
+            }
+        }
+    });
 
   if (this.windows_.length == 0)
     this.newWindow();
 
-  for (var i = 0; i < entries.length; i++) {
-    chrome.fileSystem.getWritableEntry(
-        entries[i],
-        function(entry) {
-          if (this.windows_.length > 0) {
-            this.windows_[0].openEntries([entry]);
-          } else {
-            this.entriesToOpen_.push(entry);
-          }
-        }.bind(this));
-  }
 };
+
+
 
 /**
  * @param {Window} win
@@ -100,49 +91,14 @@ Background.prototype.launch = function(launchData) {
  */
 Background.prototype.onWindowClosed = function(win) {
   console.log('Window closed:', win);
-  if (!win.contentWindow || !win.contentWindow.textApp) {
-    console.warn('No TextApp object in the window being closed:',
-                 win.contentWindow, win.contentWindow.textApp);
-    return;
-  }
-  var textApp = win.contentWindow.textApp;
-  for (var i = 0; i < this.windows_.length; i++) {
-    if (textApp === this.windows_[i]) {
-      this.windows_.splice(i, 1);
-    }
-  }
-
-  var toRetain = textApp.getFilesToRetain();
-  this.retainFiles_(toRetain);
 };
 
-/**
- * @param {Array.<FileEntry>} toRetain
- */
-Background.prototype.retainFiles_ = function(toRetain) {
-  console.log('Got ' + toRetain.length + ' files to retain:', toRetain);
-  var toRetainEntryIds = [];
-  for (var i = 0; i < toRetain.length; i++) {
-    var entryId = chrome.fileSystem.retainEntry(toRetain[i]);
-    toRetainEntryIds.push(entryId);
-  }
-  chrome.storage.local.set({'retainedEntryIds': toRetainEntryIds});
-};
 
 /**
  * @param {TextApp} textApp
  * Called by the TextApp object in the window when the window is ready.
  */
 Background.prototype.onWindowReady = function(textApp) {
-  this.windows_.push(textApp);
-  textApp.setHasChromeFrame(this.ifShowFrame_());
-
-  if (this.entriesToOpen_.length > 0) {
-    textApp.openEntries(this.entriesToOpen_);
-    this.entriesToOpen_ = [];
-  } else {
-    textApp.openNew();
-  }
 };
 
 /**
@@ -157,9 +113,7 @@ Background.prototype.copyFileEntry = function(entry, callback) {
 var background = new Background();
 chrome.app.runtime.onLaunched.addListener(background.launch.bind(background));
 
-
 /* Exports */
 window['background'] = background;
-Background.prototype['copyFileEntry'] = Background.prototype.copyFileEntry;
 Background.prototype['onWindowReady'] = Background.prototype.onWindowReady;
 Background.prototype['newWindow'] = Background.prototype.newWindow;
