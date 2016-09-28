@@ -4,14 +4,14 @@ $(function () {
         webview.on("contentload", function () {
             try {
                 webview = webview.get(0);
-                webview.contentWindow.postMessage("Init", "*");
+                webview.contentWindow.postMessage("init", "*");
             }
             catch (error) {
             }
         });
     }
     window.addEventListener('message', function () {
-        console.log("return event = ", event);
+        //console.log("return event = ", event);
         chrome.runtime.sendMessage(event.data);
     });
 })
