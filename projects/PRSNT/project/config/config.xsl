@@ -14,7 +14,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <xsl:template name="includelib">       
                
         <xsl:call-template name="mainlib"/>    
-        
+        <xsl:call-template name="eleclib"/>    
+                
         <xsl:call-template name="apply_mlib_sensor_popup">
             <xsl:with-param name="id">calcpopup__</xsl:with-param>
         </xsl:call-template>
