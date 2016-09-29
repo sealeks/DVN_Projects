@@ -18,8 +18,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <xsl:call-template name="apply_mlib_sensor_popup">
             <xsl:with-param name="id">calcpopup__</xsl:with-param>
         </xsl:call-template>
-        <xsl:call-template name="lib_svgstyle"/>
-        <xsl:apply-templates/>            
+        <xsl:call-template name="lib_svgstyle"/>        
         
     </xsl:template> 
     
