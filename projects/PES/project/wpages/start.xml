@@ -1,0 +1,27 @@
+<?xml-stylesheet href="../web-utils/libscript.xsl" type="text/xsl"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 576 324" enable-background="new 0 0 576 324" xml:space="preserve" xmlns:xml="http://www.w3.org/XML/1998/namespace" onload="init_project_controller()">
+<script type="text/javascript" xlink:href="../web-utils/js/libutil.js"/>
+<script type="text/javascript" xlink:href="../web-utils/js/designer.js"/>
+<script type="text/javascript" id="stopscript"><![CDATA[
+function ___global___unload(){
+
+};
+]]></script>
+<script type="text/javascript" id="startscript"><![CDATA[
+if ((window.$$editable)&&(!window.$$editable())){
+
+};
+]]></script>
+<project>
+  <form name="screen3" file="screen3.xml" left="3840px" top="0" width="3840px" height="2160px" caption="screen3" decorated="no" visible="true"/>
+  <form name="screen1" file="screen1.xml" left="0" top="0" width="3840px" height="2160px" caption="screen1" decorated="no" visible="true"/>
+  <form name="screen2" file="screen2.xml" left="3840px" top="0" width="3840px" height="2160px" caption="screen2" decorated="no" visible="true"/>
+  <form name="journal" file="journalreq.html" left="0%" top="0%" width="100%" height="100%" caption="gazblock" decorated="no" visible="false"/>
+  <form name="journal1" file="journalreq.html" left="100%" top="0%" width="100%" height="100%" caption="gazblock" decorated="no" visible="false"/>
+  <form name="registration" file="registration.html" left="20%" top="20%" width="60%" height="60%" caption="registration" decorated="no" visible="false"/>
+  <form name="registrationman" file="registrationman.html" left="20%" top="20%" width="60%" height="60%" caption="registrationman" decorated="no" visible="false"/>
+  <lib xsd="../web-utils/libs/main/mainlib.xsd" name="mainlib" caption="Basic"/>
+  <lib xsd="../web-utils/libs/elec/eleclib.xsd" name="eleclib" caption="Electro"/>
+  <lib xsd="../web-utils/libs/svg/svg.xsd" name="svglib" caption="SVG"/>
+</project>
+
+</svg>
