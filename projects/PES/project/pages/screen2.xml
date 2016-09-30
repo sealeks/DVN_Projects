@@ -62,18 +62,18 @@
     <svg:text x="134" y="493" text="ВН8" fill="gray" id="text30" filter="" class="elec_f_on"/>    
     <svg:text x="182" y="492" text="ВН9" fill="gray" id="text31" filter="" class="elec_f_on"/>    
     <svg:text x="155" y="450" text="ТП18" fill="gray" id="text32" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>    
-    <svg:text x="249" y="517" text="ТП19" fill="gray" id="text33" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>    
-    <svg:text x="272" y="533" text="ВН11" fill="gray" id="text34" filter="" class="elec_f_on"/>    
-    <svg:text x="271" y="501" text="ВН10" fill="gray" id="text35" filter="" class="elec_f_on"/>    
-    <svg:text id="text36" x="64" y="545" class="elec_f_on" text="ВС6"/>    
+    <svg:text x="239" y="495" text="ТП19" fill="gray" id="text33" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>    
+    <svg:text x="279" y="521" text="ВН11" fill="gray" id="text34" filter="" class="elec_f_on"/>    
+    <svg:text x="275" y="475" text="ВН10" fill="gray" id="text35" filter="" class="elec_f_on"/>    
+    <svg:text id="text36" x="55" y="553" class="elec_f_on" text="ВС6"/>    
     <svg:text id="text37" x="137" y="593" class="elec_f_txt" text="ТП330"/>    
     <svg:text x="102" y="589" text="Р91" fill="gray" id="text38" filter="" class="elec_f_on"/>    
-    <svg:text id="text39" x="94" y="519" class="elec_f_txt" text="ТП152"/>    
+    <svg:text id="text39" x="77" y="524" class="elec_f_txt" text="ТП152"/>    
     <svg:text id="text40" x="136" y="625" class="elec_f_txt" text="ТП358"/>    
     <svg:text x="96" y="620" text="Р38" fill="gray" id="text41" filter="" class="elec_f_on"/>	        
     <svg:text x="220" y="587" text="Р135" fill="gray" id="text42" filter="" class="elec_f_on"/>    
     <svg:text id="text43" x="138" y="517" class="elec_f_txt" text="ТП33"/>
-    <svg:text id="text44" x="138" y="540" class="elec_f_txt" text="ТП20"/>
+    <svg:text id="text44" x="138" y="551" class="elec_f_txt" text="ТП20"/>
     <svg:text id="text45" x="186" y="622" class="elec_f_txt" text="ТП270"/>
     <svg:text x="224" y="629" text="Р90" fill="gray" id="text46" filter="" class="elec_f_on"/>
     <svg:text id="text47" x="287" y="559" class="elec_f_txt" text="ТП253"/>    
@@ -119,9 +119,9 @@
     <svg:text x="396" y="465" text="ВН93" fill="gray" id="text87" filter="" class="elec_f_on"/>
     <svg:text x="396" y="482" text="ВН92" fill="gray" id="text88" filter="" class="elec_f_on"/>
     <svg:text x="337" y="470" text="ТП28" fill="gray" id="text89" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
-    <svg:text x="330" y="552" text="ТП250" fill="gray" id="text90" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
-    <svg:text x="396" y="563" text="ВН174" fill="gray" id="text91" filter="" class="elec_f_on"/>
-    <svg:text x="396" y="546" text="ВН173" fill="gray" id="text92" filter="" class="elec_f_on"/>
+    <svg:text x="330" y="572" text="ТП250" fill="gray" id="text90" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
+    <svg:text x="396" y="583" text="ВН174" fill="gray" id="text91" filter="" class="elec_f_on"/>
+    <svg:text x="397" y="554" text="ВН173" fill="gray" id="text92" filter="" class="elec_f_on"/>
     <svg:text id="text93" x="259" y="409" class="elec_f_txt" text="ТП242"/>
     <svg:text id="text94" x="265" y="430" class="elec_f_txt" text="ТП14"/>
     <svg:text id="text95" x="259" y="389" class="elec_f_txt" text="ТП245"/>
@@ -138,31 +138,31 @@
     <svg:text id="text106" x="735" y="753" class="elec_f_on" text="ВС37"/>
     <svg:text id="text107" x="786" y="752" class="elec_f_on" text="ВС38"/>
     <svg:text id="text108" x="882" y="671" class="elec_f_on" text="ВС35"/>
-    <svg:text id="text110" x="933" y="671" class="elec_f_on" text="ВС39"/>
+    <svg:text id="text110" x="914" y="726" class="elec_f_on" text="ВС39"/>
     <svg:text x="791" y="374" text="ВН25" fill="gray" id="text111" filter="" class="elec_f_on"/>
     <svg:text x="791" y="413" text="ВН26" fill="gray" id="text112" filter="" class="elec_f_on"/>
     <svg:text x="789" y="394" text="ТП115" fill="gray" id="text113" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
     <svg:text x="792" y="489" text="ВН28" fill="gray" id="text114" filter="" class="elec_f_on"/>
     <svg:text x="793" y="450" text="ВН27" fill="gray" id="text115" filter="" class="elec_f_on"/>
     <svg:text x="780" y="470" text="ТП116" fill="gray" id="text116" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
-    <svg:text x="943" y="366" text="ВН5" fill="gray" id="text117" filter="" class="elec_f_on"/>
+    <svg:text x="965" y="358" text="ВН5" fill="gray" id="text117" filter="" class="elec_f_on"/>
     <svg:text x="1031" y="378" text="ВН36" fill="gray" id="text118" filter="" class="elec_f_on"/>
     <svg:text x="968" y="407" text="ТП124" fill="gray" id="text119" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
     <svg:text x="1030" y="485" text="ВН33" fill="gray" id="text120" filter="" class="elec_f_on"/>
     <svg:text x="1029" y="446" text="ВН34" fill="gray" id="text121" filter="" class="elec_f_on"/>
     <svg:text x="967" y="467" text="ТП121" fill="gray" id="text122" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
-    <svg:text x="928" y="540" text="ВН31" fill="gray" id="text123" filter="" class="elec_f_on"/>
-    <svg:text x="976" y="540" text="ВН32" fill="gray" id="text124" filter="" class="elec_f_on"/>
-    <svg:text x="947" y="499" text="ТП18" fill="gray" id="text125" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
-    <svg:text id="text126" x="794" y="569" class="elec_f_on" text="ВН29"/>
-    <svg:text id="text127" x="829" y="556" class="elec_f_on" text="РШ"/>
-    <svg:text id="text128" x="886" y="553" class="elec_f_on" text="ВН104"/>
-    <svg:text id="text129" x="824" y="520" class="elec_f_txt" text="ТП117"/>
+    <svg:text x="904" y="525" text="ВН31" fill="gray" id="text123" filter="" class="elec_f_on"/>
+    <svg:text x="952" y="525" text="ВН32" fill="gray" id="text124" filter="" class="elec_f_on"/>
+    <svg:text x="906" y="479" text="ТП18" fill="gray" id="text125" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
+    <svg:text id="text126" x="797" y="596" class="elec_f_on" text="ВН29"/>
+    <svg:text id="text127" x="832" y="583" class="elec_f_on" text="РШ"/>
+    <svg:text id="text128" x="859" y="598" class="elec_f_on" text="ВН104"/>
+    <svg:text id="text129" x="827" y="547" class="elec_f_txt" text="ТП117"/>
     <svg:text x="698" y="332" text="В19" fill="gray" id="text130" filter="" class="elec_f_on"/>
     <svg:text x="753" y="332" text="В8" fill="gray" id="text131" filter="" class="elec_f_on"/>
     <svg:text x="797" y="332" text="В13" fill="gray" id="text132" filter="" class="elec_f_on"/>
     <svg:text x="848" y="332" text="В12" fill="gray" id="text133" filter="" class="elec_f_on"/>
-    <svg:text x="861" y="505" text="ВН30" fill="gray" id="text134" filter="" class="elec_f_on"/>
+    <svg:text x="889" y="552" text="ВН30" fill="gray" id="text134" filter="" class="elec_f_on"/>
     <svg:text x="1031" y="406" text="ВН35" fill="gray" id="text135" filter="" class="elec_f_on"/>
     <svg:text x="851" y="365" text="ВН4" fill="gray" id="text136" filter="" class="elec_f_on"/>
     <svg:text x="837" y="438" text="ТП230" fill="gray" id="text137" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
@@ -182,7 +182,7 @@
     <svg:text x="489" y="454" text="ВН60" fill="gray" id="text150" filter="" class="elec_f_on"/>
     <svg:text x="579" y="488" text="ТП54" fill="gray" id="text151" style="" filter="" class="elec_f_txt" rotate=""/>
     <svg:text id="text152" x="429" y="651" class="elec_f_off" text="ВС19"/>
-    <svg:text id="text153" x="367" y="614" class="elec_f_on" text="ВС20"/>
+    <svg:text id="text153" x="358" y="633" class="elec_f_on" text="ВС20"/>
     <svg:text id="text154" x="384" y="695" class="elec_f_off" text="ВС17"/>
     <svg:text id="text155" x="439" y="695" class="elec_f_on" text="ВС18"/>
     <svg:text id="text156" x="645" y="728" class="elec_f_txt" text="ТП290"/>
@@ -206,7 +206,7 @@
     <svg:text id="text173" x="737" y="809" class="elec_f_on" text="ВС5"/>
     <svg:text id="text174" x="588" y="785" class="elec_f_txt" text="ТП142"/>
     <svg:text id="text176" x="541" y="806" class="elec_f_txt" text="ТП122"/>
-    <svg:text x="942" y="858" text="ТП298" fill="gray" id="text177" style="" filter="" class="elec_f_txt" rotate=""/>
+    <svg:text x="948" y="856" text="ТП298" fill="gray" id="text177" style="" filter="" class="elec_f_txt" rotate=""/>
     <svg:text x="883" y="853" text="ТП246" fill="gray" id="text178" style="" filter="" class="elec_f_txt" rotate=""/>
     <svg:text x="728" y="859" text="ТП123" fill="gray" id="text179" style="" filter="" class="elec_f_txt" rotate=""/>
     <svg:text x="1001" y="639" text="ВН24" fill="gray" id="text180" filter="" class="elec_f_on"/>
@@ -270,12 +270,12 @@
     <svg:text id="text239" x="1009" y="141" class="elec_f_txt" text="ТП196"/>
     <svg:text id="text240" x="1098" y="173" class="elec_f_txt" text="ТП105"/>
     <svg:text id="text241" x="1187" y="227" class="elec_f_on" text="ВС2"/>
-    <svg:text id="text242" x="1148" y="433" class="elec_f_txt" text="ТП143"/>
+    <svg:text id="text242" x="1142" y="422" class="elec_f_txt" text="ТП143"/>
     <svg:text id="text243" x="1260" y="451" class="elec_f_on" text="ВС10"/>
     <svg:text id="text244" x="1299" y="364" class="elec_f_txt" text="ТП140"/>
-    <svg:text x="1355" y="495" text="ТП129" fill="gray" id="text245" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
-    <svg:text x="1296" y="461" text="ВН131" fill="gray" id="text246" filter="" class="elec_f_on"/>
-    <svg:text x="1296" y="535" text="ВН132" fill="gray" id="text247" filter="" class="elec_f_on"/>
+    <svg:text x="1312" y="500" text="ТП129" fill="gray" id="text245" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
+    <svg:text x="1355" y="480" text="ВН131" fill="gray" id="text246" filter="" class="elec_f_on"/>
+    <svg:text x="1357" y="518" text="ВН132" fill="gray" id="text247" filter="" class="elec_f_on"/>
     <svg:text id="text248" x="1390" y="426" class="elec_f_txt" text="ТП128"/>
     <svg:text id="text249" x="1390" y="453" class="elec_f_txt" text="ТП359"/>
     <svg:text x="1312" y="591" text="ВН45" fill="gray" id="text250" filter="" class="elec_f_on"/>
@@ -303,24 +303,24 @@
     <svg:text id="text272" x="1212" y="784" class="elec_f_txt" text="ТП137"/>
     <svg:text x="1212" y="579" text="Р21" fill="gray" id="text273" filter="" class="elec_f_on"/>
     <svg:text id="text274" x="1280" y="489" class="elec_f_txt" text="ТП323"/>
-    <svg:text id="text276" x="1196" y="522" class="elec_f_on" text="ВС55"/>
+    <svg:text id="text276" x="1193" y="529" class="elec_f_on" text="ВС55"/>
     <svg:text id="text277" x="1263" y="584" class="elec_f_txt" text="ТП445"/>
     <svg:text x="1193" y="668" text="Р44" fill="gray" id="text275" filter="" class="elec_f_on"/>
     <svg:text id="text278" x="1142" y="625" class="elec_f_on" text="ВС34"/>
     <svg:text id="text279" x="1195" y="698" class="elec_f_txt" text="ТП291"/>
     <svg:text id="text280" x="1188" y="597" class="elec_f_txt" text="ТП210"/>
     <svg:text x="1130" y="524" text="Р102" fill="gray" id="text282" filter="" class="elec_f_on"/>
-    <svg:text x="1038" y="528" text="ТП138" fill="gray" id="text283" style="" filter="" class="elec_f_txt" rotate=""/>
+    <svg:text x="1038" y="525" text="ТП138" fill="gray" id="text283" style="" filter="" class="elec_f_txt" rotate=""/>
     <svg:text x="1078" y="525" text="Р16" fill="gray" id="text284" filter="" class="elec_f_on"/>
-    <svg:text x="1080" y="494" text="Р104" fill="gray" id="text285" filter="" class="elec_f_on"/>
-    <svg:text x="1080" y="441" text="Р105" fill="gray" id="text286" filter="" class="elec_f_on"/>
-    <svg:text id="text287" x="1102" y="387" class="elec_f_txt" text="ТП309"/>
-    <svg:text id="text288" x="1173" y="479" class="elec_f_txt" text="ТП367"/>
+    <svg:text x="1080" y="454" text="Р104" fill="gray" id="text285" filter="" class="elec_f_on"/>
+    <svg:text x="1080" y="401" text="Р105" fill="gray" id="text286" filter="" class="elec_f_on"/>
+    <svg:text id="text287" x="1102" y="347" class="elec_f_txt" text="ТП309"/>
+    <svg:text id="text288" x="1180" y="417" class="elec_f_txt" text="ТП367"/>
     <svg:text x="1099" y="607" text="ТП350" fill="gray" id="text289" style="" filter="" class="elec_f_txt" rotate=""/>
-    <svg:text id="text290" x="1099" y="594" class="elec_f_txt" text="ТП294"/>
-    <svg:text id="text181" x="1143" y="603" class="elec_f_txt" text="ТП323"/>
-    <svg:text id="text291" x="1493" y="533" class="elec_f_txt" text="ТП308"/>
-    <svg:text id="text281" x="1491" y="493" class="elec_f_txt" text="ТП325"/>
+    <svg:text id="text290" x="1102" y="575" class="elec_f_txt" text="ТП294"/>
+    <svg:text id="text181" x="1157" y="574" class="elec_f_txt" text="ТП323"/>
+    <svg:text id="text291" x="1463" y="556" class="elec_f_txt" text="ТП308"/>
+    <svg:text id="text281" x="1462" y="511" class="elec_f_txt" text="ТП325"/>
     <svg:text id="text292" x="1489" y="285" class="elec_f_txt" text="ТП131"/>
     <svg:text x="1464" y="173" text="ТП198" fill="gray" id="text293" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
     <svg:text x="1491" y="215" text="ВН54" fill="gray" id="text294" filter="" class="elec_f_on"/>
@@ -388,7 +388,7 @@
     <svg:text x="817" y="26" text="ТП152" fill="gray" id="text355" style="" filter="" class="elec_f_txt" rotate=""/>
     <svg:text x="867" y="26" text="ТП150" fill="gray" id="text356" style="" filter="" class="elec_f_txt" rotate=""/>
     <svg:text x="904" y="26" text="ТП156" fill="gray" id="text357" style="" filter="" class="elec_f_txt" rotate=""/>
-    <svg:text x="942" y="26" text="ТП393" fill="gray" id="text358" style="" filter="" class="elec_f_txt" rotate=""/>
+    <svg:text x="946" y="27" text="ТП393" fill="gray" id="text358" style="" filter="" class="elec_f_txt" rotate=""/>
     <svg:text id="text359" x="1004" y="63" class="elec_f_txt" text="ТП157"/>
     <svg:text x="721" y="82" text="ТП102" fill="gray" id="text360" style="" filter="" class="elec_f_txt" rotate=""/>
     <svg:text id="text361" x="1055" y="95" class="elec_f_on" text="ВС52"/>
@@ -473,43 +473,43 @@
     <svg:text id="text440" x="1704" y="444" class="elec_f_txt" text="ТП8"/>
     <svg:text x="1774" y="436" text="ВН158" fill="gray" id="text441" filter="" class="elec_f_on"/>
     <svg:text x="1617" y="204" text="П/СТ-48 Птицефабрика" fill="gray" id="text442" style="font-size: 18" filter="" class="elec_f_txt" transform=""/>
-    <svg:text id="text443" x="1712" y="516" class="elec_f_txt" text="ТП3K"/>
-    <svg:text id="text444" x="1722" y="551" class="elec_f_on" text="РШ"/>
-    <svg:text x="1644" y="560" text="ВН3K" fill="gray" id="text445" filter="" class="elec_f_on"/>
-    <svg:text x="1786" y="545" text="ВН4К" fill="gray" id="text446" filter="" class="elec_f_on"/>
-    <svg:text x="1648" y="597" text="Р12K" fill="gray" id="text447" filter="" class="elec_f_on"/>
-    <svg:text x="1789" y="605" text="Р1К" fill="gray" id="text448" filter="" class="elec_f_on"/>
-    <svg:text x="1786" y="646" text="Р2К" fill="gray" id="text449" filter="" class="elec_f_on"/>
-    <svg:text id="text450" x="1722" y="637" class="elec_f_on" text="РШ"/>
-    <svg:text x="1644" y="646" text="Р11К" fill="gray" id="text451" filter="" class="elec_f_on"/>
-    <svg:text x="1653" y="676" text="Р9К" fill="gray" id="text452" filter="" class="elec_f_on"/>
-    <svg:text x="1788" y="675" text="Р7К" fill="gray" id="text454" filter="" class="elec_f_on"/>
-    <svg:text x="1655" y="754" text="Р6К" fill="gray" id="text456" filter="" class="elec_f_on"/>
-    <svg:text x="1789" y="756" text="Р5К" fill="gray" id="text457" filter="" class="elec_f_on"/>
-    <svg:text x="1784" y="799" text="ВC2K" fill="gray" id="text458" filter="" class="elec_f_on"/>
-    <svg:text id="text459" x="1722" y="795" class="elec_f_on" text="РШ"/>
-    <svg:text x="1645" y="803" text="ВC1K" fill="gray" id="text460" filter="" class="elec_f_on"/>
-    <svg:text x="1658" y="839" text="В13" fill="gray" id="text461" filter="" class="elec_f_on"/>
-    <svg:text id="text462" x="1717" y="841" class="elec_f_txt" text="РП1"/>
-    <svg:text x="1786" y="839" text="В4" fill="gray" id="text463" filter="" class="elec_f_on"/>
-    <svg:text id="text464" x="1722" y="879" class="elec_f_on" text="РШ"/>
-    <svg:text x="1644" y="731" text="Р10К" fill="gray" id="text465" filter="" class="elec_f_on"/>
-    <svg:text id="text466" x="1722" y="722" class="elec_f_on" text="РШ"/>
-    <svg:text x="1785" y="731" text="Р8К" fill="gray" id="text467" filter="" class="elec_f_on"/>
-    <svg:text x="1787" y="916" text="В7" fill="gray" id="text469" filter="" class="elec_f_on"/>
-    <svg:text id="text470" x="1722" y="961" class="elec_f_on" text="РШ"/>
-    <svg:text x="1823" y="537" text="ВН2К" fill="gray" id="text472" filter="" class="elec_f_on"/>
-    <svg:text x="1826" y="611" text="ВН1К" fill="gray" id="text473" filter="" class="elec_f_on"/>
-    <svg:text id="text474" x="1855" y="572" class="elec_f_txt" text="ТП6K"/>
-    <svg:text id="text475" x="1714" y="598" class="elec_f_txt" text="ТП2K"/>
-    <svg:text id="text476" x="1713" y="683" class="elec_f_txt" text="ТП1K"/>
-    <svg:text id="text453" x="1706" y="760" class="elec_f_txt" text="РП &quot;Кижи&quot;"/>
-    <svg:text id="text455" x="1712" y="924" class="elec_f_txt" text="ПС44П"/>
-    <svg:text x="1788" y="957" text="В4" fill="gray" id="text468" filter="" class="elec_f_on"/>
-    <svg:text x="1659" y="928" text="В13" fill="gray" id="text471" filter="" class="elec_f_on"/>
-    <svg:text x="1663" y="957" text="В3" fill="gray" id="text477" filter="" class="elec_f_on"/>
-    <svg:text id="text478" x="1676" y="1031" class="elec_f_txt" text="ТП1433"/>
-    <svg:text id="text479" x="1758" y="1032" class="elec_f_txt" text="ТП1434"/>
+    <svg:text id="text443" x="1707" y="549" class="elec_f_txt" text="ТП3K"/>
+    <svg:text id="text444" x="1716" y="588" class="elec_f_on" text="РШ"/>
+    <svg:text x="1639" y="583" text="ВН3K" fill="gray" id="text445" filter="" class="elec_f_on"/>
+    <svg:text x="1754" y="602" text="ВН4К" fill="gray" id="text446" filter="" class="elec_f_on"/>
+    <svg:text x="1640" y="619" text="Р12K" fill="gray" id="text447" filter="" class="elec_f_on"/>
+    <svg:text x="1781" y="627" text="Р1К" fill="gray" id="text448" filter="" class="elec_f_on"/>
+    <svg:text x="1778" y="668" text="Р2К" fill="gray" id="text449" filter="" class="elec_f_on"/>
+    <svg:text id="text450" x="1714" y="659" class="elec_f_on" text="РШ"/>
+    <svg:text x="1636" y="668" text="Р11К" fill="gray" id="text451" filter="" class="elec_f_on"/>
+    <svg:text x="1645" y="698" text="Р9К" fill="gray" id="text452" filter="" class="elec_f_on"/>
+    <svg:text x="1780" y="697" text="Р7К" fill="gray" id="text454" filter="" class="elec_f_on"/>
+    <svg:text x="1647" y="776" text="Р6К" fill="gray" id="text456" filter="" class="elec_f_on"/>
+    <svg:text x="1781" y="778" text="Р5К" fill="gray" id="text457" filter="" class="elec_f_on"/>
+    <svg:text x="1776" y="821" text="ВC2K" fill="gray" id="text458" filter="" class="elec_f_on"/>
+    <svg:text id="text459" x="1714" y="817" class="elec_f_on" text="РШ"/>
+    <svg:text x="1637" y="825" text="ВC1K" fill="gray" id="text460" filter="" class="elec_f_on"/>
+    <svg:text x="1650" y="861" text="В13" fill="gray" id="text461" filter="" class="elec_f_on"/>
+    <svg:text id="text462" x="1709" y="863" class="elec_f_txt" text="РП1"/>
+    <svg:text x="1778" y="861" text="В4" fill="gray" id="text463" filter="" class="elec_f_on"/>
+    <svg:text id="text464" x="1714" y="901" class="elec_f_on" text="РШ"/>
+    <svg:text x="1636" y="753" text="Р10К" fill="gray" id="text465" filter="" class="elec_f_on"/>
+    <svg:text id="text466" x="1714" y="744" class="elec_f_on" text="РШ"/>
+    <svg:text x="1777" y="753" text="Р8К" fill="gray" id="text467" filter="" class="elec_f_on"/>
+    <svg:text x="1779" y="938" text="В7" fill="gray" id="text469" filter="" class="elec_f_on"/>
+    <svg:text id="text470" x="1714" y="983" class="elec_f_on" text="РШ"/>
+    <svg:text x="1815" y="559" text="ВН2К" fill="gray" id="text472" filter="" class="elec_f_on"/>
+    <svg:text x="1818" y="633" text="ВН1К" fill="gray" id="text473" filter="" class="elec_f_on"/>
+    <svg:text id="text474" x="1847" y="594" class="elec_f_txt" text="ТП6K"/>
+    <svg:text id="text475" x="1706" y="620" class="elec_f_txt" text="ТП2K"/>
+    <svg:text id="text476" x="1705" y="705" class="elec_f_txt" text="ТП1K"/>
+    <svg:text id="text453" x="1698" y="782" class="elec_f_txt" text="РП &quot;Кижи&quot;"/>
+    <svg:text id="text455" x="1704" y="946" class="elec_f_txt" text="ПС44П"/>
+    <svg:text x="1780" y="979" text="В4" fill="gray" id="text468" filter="" class="elec_f_on"/>
+    <svg:text x="1651" y="950" text="В13" fill="gray" id="text471" filter="" class="elec_f_on"/>
+    <svg:text x="1655" y="979" text="В3" fill="gray" id="text477" filter="" class="elec_f_on"/>
+    <svg:text id="text478" x="1668" y="1053" class="elec_f_txt" text="ТП1433"/>
+    <svg:text id="text479" x="1750" y="1054" class="elec_f_txt" text="ТП1434"/>
     <svg:text x="1813" y="967" text="ТП682 ППЭС" fill="gray" id="text480" style="font-size: 14" filter="" class="elec_f_txt" transform=""/>
     <svg:text x="1870" y="1056" text="ТП513" fill="gray" id="text481" style="font-size: 12; " filter="" class="elec_f_txt" rotate=""/>
     <svg:text x="1837" y="246" text="ЭЧ-8" fill="gray" id="text482" style="font-size: 14" filter="" class="elec_f_txt" transform=""/>
@@ -556,7 +556,7 @@
     <elib:eline id="line5189" x1="61" x2="77" y1="991" y2="991" stroke-width="2" environment="kU6"/>
     <elib:eline id="line5199" x1="69" x2="99" y1="974" y2="974" stroke-width="2" environment="kU6"/>
     <elib:eline id="line21" x1="59" x2="76" y1="601" y2="601" stroke-width="2" environment="kU6"/>
-    <elib:eline id="line22" x1="123" x2="123" y1="563" y2="543" stroke-width="2" environment="kU6"/>
+    <elib:eline id="line22" x1="123" x2="123" y1="543" y2="543" stroke-width="2" environment="kU6"/>
     <elib:eline id="line5265" x1="233" x2="233" y1="315" y2="413" stroke-width="2" environment="kU6"/>
     <elib:eline id="line94" x1="612" x2="629" y1="799" y2="799" stroke-width="2" environment="kU6"/>
     <elib:eline id="line5271" x1="216" x2="233" y1="371" y2="371" stroke-width="2" environment="kU6"/>
@@ -580,7 +580,7 @@
     <elib:eline id="line106" x1="334" x2="365" y1="196" y2="196" stroke-width="2" environment="kU6"/>
     <elib:eline id="line5351" x1="214" x2="206" y1="937" y2="937" stroke-width="2" environment="kU10"/>
     <elib:eline id="line26" x1="187" x2="204" y1="512" y2="512" stroke-width="2" environment="kU6"/>
-    <elib:eline id="line27" x1="186" x2="203" y1="536" y2="536" stroke-width="2" environment="kU6"/>
+    <elib:eline id="line27" x1="186" x2="203" y1="547" y2="547" stroke-width="2" environment="kU6"/>
     <elib:eline id="line107" x1="576" x2="576" y1="167" y2="147" stroke-width="2" environment="kU6"/>
     <elib:eline id="line108" x1="576" x2="576" y1="208" y2="188" stroke-width="2" environment="kU6"/>
     <elib:eline id="line5353" x1="141" x2="125" y1="1039" y2="1039" stroke-width="2" environment="kU10"/>
@@ -642,7 +642,7 @@
     <elib:eline id="line142" x1="1201" x2="1221" y1="612" y2="612" stroke-width="2" environment="kU6"/>
     <elib:eline id="line46" x1="254" x2="254" y1="1020" y2="1040" stroke-width="2" environment="kU10"/>
     <elib:eline id="line47" x1="254" x2="254" y1="987" y2="997" stroke-width="2" environment="kU10"/>
-    <elib:eline id="line143" x1="1119" x2="1149" y1="474" y2="474" stroke-width="2" environment="kU6"/>
+    <elib:eline id="line143" x1="1119" x2="1149" y1="434" y2="434" stroke-width="2" environment="kU6"/>
     <elib:eline id="line48" x1="319" x2="289" y1="719" y2="719" stroke-width="2" environment="kU10"/>
     <elib:eline id="line144" x1="1557" x2="1582" y1="551" y2="551" stroke-width="2" environment="kU6"/>
     <elib:eline id="line49" x1="318" x2="268" y1="810" y2="810" stroke-width="2" environment="kU10"/>
@@ -678,7 +678,7 @@
     <elib:eline id="line154" x1="510" x2="480" y1="928" y2="928" stroke-width="2" environment="kU10"/>
     <elib:eline id="line161" x1="497" x2="497" y1="929" y2="949" stroke-width="2" environment="kU10"/>
     <elib:eline id="line162" x1="546" x2="546" y1="928" y2="948" stroke-width="2" environment="kU10"/>
-    <elib:eline id="line61" x1="382" x2="382" y1="490" y2="520" stroke-width="2" environment="kUKbl"/>
+    <elib:eline id="line61" x1="382" x2="382" y1="490" y2="540" stroke-width="2" environment="kUKbl"/>
     <elib:eline id="line62" x1="316" x2="381" y1="385" y2="385" stroke-width="2" environment="kU6"/>
     <elib:eline id="line63" x1="316" x2="381" y1="426" y2="426" stroke-width="2" environment="kU6"/>
     <elib:eline id="line64" x1="316" x2="381" y1="406" y2="406" stroke-width="2" environment="kU6"/>
@@ -747,7 +747,7 @@
     <elib:epath stroke-width="2" d=" M544,399v60" stroke="#bbb" id="epath84" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M856,193h100" stroke="#bbb" id="epath116" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M895,279v-20h30" stroke="#bbb" id="epath117" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M946,259h28" stroke="#bbb" id="epath118" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M940,259h35" stroke="#bbb" id="epath118" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M957,176h60" stroke="#bbb" id="epath119" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M94,64v20h-20" stroke="#bbb" id="epath6" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1040,272h60" stroke="#bbb" id="epath120" environment="kU6" state="1" visible=""/>
@@ -772,7 +772,7 @@
     
     <elib:epath stroke-width="2" d=" M911,830h60" stroke="#bbb" id="epath91" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1245,418h90v50" stroke="#bbb" id="epath138" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1349,461v60" stroke="#bbb" id="epath139" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1351,464v60" stroke="#bbb" id="epath139" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M304,737v60" stroke="#bbb" id="epath29" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M120,39v9" stroke="#bbb" id="epath4" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M198,32v16" stroke="#bbb" id="epath10" environment="kUKbl" state="1" visible=""/>
@@ -787,7 +787,7 @@
     <elib:epath stroke-width="2" d=" M1375,693h60" stroke="#bbb" id="epath145" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M139,456h60" stroke="#bbb" id="epath18" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1335,708h40" stroke="#bbb" id="epath146" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M781,741v35h155v34" stroke="#bbb" id="epath94" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M781,741v35h152v34" stroke="#bbb" id="epath94" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M791,817h70" stroke="#bbb" id="epath95" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M605,821h100" stroke="#bbb" id="epath96" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M306,912v60" stroke="#bbb" id="epath30" environment="kU10" state="1" visible=""/>
@@ -800,7 +800,7 @@
     <elib:epath stroke-width="2" d=" M1334,663h-70v40" stroke="#bbb" id="epath150" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1265,722v30" stroke="#bbb" id="epath151" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1230,750v-15h36" stroke="#bbb" id="epath152" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1219,542h12" stroke="#bbb" id="epath153" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1219,502h24" stroke="#bbb" id="epath153" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1244,585v60h-30" stroke="#bbb" id="epath154" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M667,822v50h280" stroke="#bbb" id="epath98" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1169,645h25" stroke="#bbb" id="epath155" environment="kU6" state="1" visible=""/>
@@ -808,21 +808,21 @@
     <elib:epath stroke-width="2" d=" M1183,645v30" stroke="#bbb" id="epath156" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M272,32v16" stroke="#bbb" id="epath5" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1141,645h-20v20h20v130" stroke="#bbb" id="epath157" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1152,542h40" stroke="#bbb" id="epath158" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1171,542v30" stroke="#bbb" id="epath159" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1101,542h30" stroke="#bbb" id="epath160" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1063,542h15" stroke="#bbb" id="epath161" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1117,512v30" stroke="#bbb" id="epath162" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1118,460v30" stroke="#bbb" id="epath163" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1118,414v25" stroke="#bbb" id="epath164" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1152,502h40" stroke="#bbb" id="epath158" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1171,513v40" stroke="#bbb" id="epath159" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1101,502h30" stroke="#bbb" id="epath160" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1063,502h15" stroke="#bbb" id="epath161" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1117,472v30" stroke="#bbb" id="epath162" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1118,420v30" stroke="#bbb" id="epath163" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1118,374v25" stroke="#bbb" id="epath164" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="3" d=" M424,614v45" stroke="#bbb" id="epath86" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="3" d=" M423,686v45" stroke="#bbb" id="epath87" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1076,630h20v-10h8" stroke="#bbb" id="epath165" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1038,657v20h-50v140h-16" stroke="#bbb" id="epath99" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1117,543v20" stroke="#bbb" id="epath166" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1117,523v40" stroke="#bbb" id="epath166" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M271,66v80h350v-50h160a6,6 6 0,1 12 0 h20" stroke="#bbb" id="epath7" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M104,564 h153" stroke="#bbb" id="epath22" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M258,545v30" stroke="#bbb" id="epath23" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M258,525v40" stroke="#bbb" id="epath23" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M195,862 h60" stroke="#bbb" id="epath33" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1449,178h60" stroke="#bbb" id="epath100" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M195,841 h60" stroke="#bbb" id="epath34" environment="kU10" state="1" visible=""/>
@@ -838,7 +838,7 @@
     <elib:epath stroke-width="2" d=" M1547,381v80" stroke="#bbb" id="epath173" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1547,340v20" stroke="#bbb" id="epath174" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M194,883 h60" stroke="#bbb" id="epath38" environment="kU10" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M199,471 h60 v10" stroke="#bbb" id="epath19" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M199,471 h50" stroke="#bbb" id="epath19" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="3" d=" M501,1041.5 h 120" stroke="#bbb" id="epath176" environment="kU10" state="1"/>
     <elib:epath stroke-width="2" d=" M328,59v10h100" stroke="#bbb" id="epath8" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M513,1025.5v18" stroke="#bbb" id="epath177" environment="kU10" state="1" visible=""/>
@@ -876,14 +876,14 @@
     <elib:epath stroke-width="2" d=" M746,872v30" stroke="#bbb" id="epath201" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M876,639v40" stroke="#bbb" id="epath81" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M602,987h30v-50h40" stroke="#bbb" id="epath197" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M244,483v60" stroke="#bbb" id="epath20" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M274,464v60" stroke="#bbb" id="epath20" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M601,915v30" stroke="#bbb" id="epath203" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M602,895v-45h35" stroke="#bbb" id="epath204" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M370,437v60" stroke="#bbb" id="epath43" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M623,850v40h15" stroke="#bbb" id="epath202" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M510,878v50h90" stroke="#bbb" id="epath205" environment="kU10" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M728,375v220h148v44" stroke="#bbb" id="epath82" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M370,520v60" stroke="#bbb" id="epath44" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M728,375v230h148v34" stroke="#bbb" id="epath82" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M370,540v60" stroke="#bbb" id="epath44" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M749,139v60" stroke="#bbb" id="epath101" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M535,857v70" stroke="#bbb" id="epath206" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M536,858h20" stroke="#bbb" id="epath207" environment="kU10" state="1" visible=""/>
@@ -919,7 +919,7 @@
     <elib:epath stroke-width="2" d=" M477,447v270h-20" stroke="#bbb" id="epath45" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M259,645h110v70h20" stroke="#bbb" id="epath46" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M258,594v20" stroke="#bbb" id="epath24" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M384,578v20h20v20" stroke="#bbb" id="epath47" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M384,578v10h20v10" stroke="#bbb" id="epath47" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1744,89v15" stroke="#bbb" id="epath235" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1744,125v20" stroke="#bbb" id="epath236" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M529,460v314h203" stroke="#bbb" id="epath48" environment="kU6" state="1" visible=""/>
@@ -972,14 +972,14 @@
     <elib:epath stroke-width="2" d=" M1528,1021h70" stroke="#bbb" id="epath266" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M259,640 h50 v-15" stroke="#bbb" id="epath26" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1528,1044h70" stroke="#bbb" id="epath267" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1689,637v40" stroke="#bbb" id="epath291" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1681,659v40" stroke="#bbb" id="epath291" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1503,934h25" stroke="#bbb" id="epath268" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1459,935h25" stroke="#bbb" id="epath269" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="3" d=" M1664,214 h 100" stroke="#bbb" id="epath263" environment="kU10" state="1"/>
     <elib:epath stroke-width="3" d=" M1664,222 h100" stroke="#bbb" id="epath270" environment="kU10" state="1"/>
     <elib:epath stroke-width="2" d=" M1689,215v16" stroke="#bbb" id="epath271" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1739,222v10" stroke="#bbb" id="epath272" environment="kU10" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1773,637v40" stroke="#bbb" id="epath292" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1765,659v40" stroke="#bbb" id="epath292" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1689,249v30" stroke="#bbb" id="epath273" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1739,249v30" stroke="#bbb" id="epath274" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1675,324v30" stroke="#bbb" id="epath275" environment="kUKbl" state="1" visible=""/>
@@ -995,48 +995,48 @@
     <elib:epath stroke-width="2" d=" M1666,459h40" stroke="#bbb" id="epath280" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1727,459h40" stroke="#bbb" id="epath283" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1761,398v40" stroke="#bbb" id="epath284" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M933,504h60" stroke="#bbb" id="epath61" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1678,528h40" stroke="#bbb" id="epath285" environment="kU10" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1739,528h40" stroke="#bbb" id="epath286" environment="kU10" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1689,552v40" stroke="#bbb" id="epath287" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1774,552v5h50" stroke="#bbb" id="epath288" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1680,614h40" stroke="#bbb" id="epath289" environment="kU10" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1741,614h40" stroke="#bbb" id="epath290" environment="kU10" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M801,534h30" stroke="#bbb" id="epath62" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M852,534h30" stroke="#bbb" id="epath63" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1680,698h40" stroke="#bbb" id="epath293" environment="kU10" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1741,698h40" stroke="#bbb" id="epath294" environment="kU10" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1689,722v30" stroke="#bbb" id="epath295" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1773,721v30" stroke="#bbb" id="epath296" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M909,489h60" stroke="#bbb" id="epath61" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1672,565h40" stroke="#bbb" id="epath285" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1733,565h40" stroke="#bbb" id="epath286" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1681,574v40" stroke="#bbb" id="epath287" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1766,579h43" stroke="#bbb" id="epath288" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1672,636h40" stroke="#bbb" id="epath289" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1733,636h40" stroke="#bbb" id="epath290" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M804,561h30" stroke="#bbb" id="epath62" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M855,561h30" stroke="#bbb" id="epath63" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1672,720h40" stroke="#bbb" id="epath293" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1733,720h40" stroke="#bbb" id="epath294" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1681,744v30" stroke="#bbb" id="epath295" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1765,743v30" stroke="#bbb" id="epath296" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M728,309v10" stroke="#bbb" id="epath64" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1679,772h40" stroke="#bbb" id="epath297" environment="kU10" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1740,772h40" stroke="#bbb" id="epath298" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1671,794h40" stroke="#bbb" id="epath297" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1732,794h40" stroke="#bbb" id="epath298" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M728,336v40" stroke="#bbb" id="epath65" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M882,521h50" stroke="#bbb" id="epath66" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1688,795v40" stroke="#bbb" id="epath299" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1773,795v40" stroke="#bbb" id="epath300" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M993,520h24v-30" stroke="#bbb" id="epath67" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1679,856h40" stroke="#bbb" id="epath301" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M911,507h-36v37" stroke="#bbb" id="epath66" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1680,817v40" stroke="#bbb" id="epath299" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1765,817v40" stroke="#bbb" id="epath300" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M993,520hv-30" stroke="#bbb" id="epath67" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1671,878h40" stroke="#bbb" id="epath301" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M778,302v16" stroke="#bbb" id="epath68" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1740,856h40" stroke="#bbb" id="epath302" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1732,878h40" stroke="#bbb" id="epath302" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M779,336v25" stroke="#bbb" id="epath69" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M560,669v20" stroke="#bbb" id="epath88" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1688,877v40" stroke="#bbb" id="epath303" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1680,899v40" stroke="#bbb" id="epath303" environment="kUKbl" state="1" visible=""/>
     
-    <elib:epath stroke-width="2" d=" M1773,877v40" stroke="#bbb" id="epath304" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1765,899v40" stroke="#bbb" id="epath304" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M828,308v10" stroke="#bbb" id="epath70" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1740,938h40" stroke="#bbb" id="epath305" environment="kU10" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1679,938h40" stroke="#bbb" id="epath306" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1732,960h40" stroke="#bbb" id="epath305" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1671,960h40" stroke="#bbb" id="epath306" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M828,335v40 h45" stroke="#bbb" id="epath71" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1775,592v-5h50" stroke="#bbb" id="epath307" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1849,538v60" stroke="#bbb" id="epath308" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1767,614v-5h50" stroke="#bbb" id="epath307" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1841,560v60" stroke="#bbb" id="epath308" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M878,309v10" stroke="#bbb" id="epath72" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M878,336v10h140v20" stroke="#bbb" id="epath73" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M120,337v20h-30v113" stroke="#bbb" id="epath16" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M780,494v54h20" stroke="#bbb" id="epath74" environment="kUKbl" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M780,494v84h20" stroke="#bbb" id="epath74" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M779,419v20" stroke="#bbb" id="epath75" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1774,961v40" stroke="#bbb" id="epath309" environment="kU10" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1689,961v40" stroke="#bbb" id="epath310" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1766,983v40" stroke="#bbb" id="epath309" environment="kU10" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M1681,983v40" stroke="#bbb" id="epath310" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M892,375h75" stroke="#bbb" id="epath76" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="3" d=" M1808,974 h 80" stroke="#bbb" id="epath311" environment="kU6" state="1"/>
     <elib:epath stroke-width="2" d=" M1857,1018v25" stroke="#bbb" id="epath312" environment="kU6" state="1" visible=""/>
@@ -1051,9 +1051,9 @@
     <elib:epath stroke-width="2" d=" M1856,382v25" stroke="#bbb" id="epath318" environment="kU10" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1018,410v25" stroke="#bbb" id="epath77" environment="kUKbl" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1856,424v25" stroke="#bbb" id="epath319" environment="kU10" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M873,556v20h155" stroke="#bbb" id="epath78" environment="kUKbl" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1232,488v54" stroke="#bbb" id="epath320" environment="kU6" state="1" visible=""/>
-    <elib:epath stroke-width="2" d=" M1232,488h14" stroke="#bbb" id="epath321" environment="kU6" state="1" visible=""/>
+    <elib:epath stroke-width="2" d=" M873,556h155" stroke="#bbb" id="epath78" environment="kUKbl" state="1" visible=""/>
+    
+    
     <elib:epath stroke-width="2" d=" M1052,568v90" stroke="#bbb" id="epath79" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M855,247v32" stroke="#bbb" id="epath109" environment="kU6" state="1" visible=""/>
     <elib:switcher x="1001" y="904" height="25" width="25" id="V93" type="breaker" state="" environment="kU10" filter="" rotate="" pos="vn51" roff="" initstate="on" header="ВН51"/>
@@ -1074,7 +1074,7 @@
     <elib:switcher id="polygon63" x="369" y="856" width="25" height="25" environment="kU10" type="disconnector" pos="rztp345" initstate="on" rotate="90" header="Р92"/>
     <elib:switcher id="polygon4379" x="74" y="773" width="25" height="25" environment="kU6" type="station" header="ТП237" pos="tp237"/>
     <elib:switcher id="polygon131" x="552" y="104" width="25" height="25" environment="kU6" type="station" pos="tp296" header="ТП296"/>
-    <elib:switcher id="polygon27" x="166" y="523" width="25" height="25" environment="kU6" type="station" header="ТП20" pos="tp20"/>
+    <elib:switcher id="polygon27" x="166" y="534" width="25" height="25" environment="kU6" type="station" header="ТП20" pos="tp20"/>
     <elib:switcher id="polygon64" x="369" y="877" width="25" height="25" environment="kU10" type="disconnector" pos="rz50" initstate="on" rotate="90" header="Р50"/>
     <elib:switcher id="polygon28" x="166" y="500" width="25" height="25" environment="kU6" type="station" pos="tp33" header="ТП33"/>
     <elib:switcher x="785" y="1022" height="25" width="25" id="V99" type="disconnector" state="" environment="kU10" filter="" rotate="90" pos="rz3" roff="" initstate="off" header="Р3"/>
@@ -1129,7 +1129,7 @@
     <elib:switcher x="497" y="854" height="25" width="25" id="V105" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz151" roff="" initstate="on" header="Р151"/>
     <elib:switcher id="polygon219" x="498" y="823" width="25" height="25" environment="kU10" type="station" pos="tp46" header="ТП46"/>
     <elib:switcher x="1321" y="765" height="25" width="25" id="V77" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn6" roff="" initstate="on" header="ВН6"/>
-    <elib:switcher x="370" y="517" height="25" width="25" id="V28" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn173" roff="" initstate="on" header="ВН173"/>
+    <elib:switcher x="370" y="537" height="25" width="25" id="V28" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn173" roff="" initstate="on" header="ВН173"/>
     <elib:switcher x="107" y="134" height="25" width="25" id="V8" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn77" roff="" initstate="on" header="ВН77"/>
     <elib:switcher id="polygon29" x="202" y="500" width="25" height="25" environment="kU6" type="disconnector" pos="rztp33" initstate="on" rotate="90" header="ТП33 Р"/>
     <elib:switcher x="721" y="177" height="25" width="25" id="V50" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn94" roff="" initstate="on" header="ВН94"/>
@@ -1137,10 +1137,10 @@
     <elib:switcher x="1321" y="805" height="25" width="25" id="V78" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn7" roff="" initstate="on" header="ВН7"/>
     <elib:switcher id="polygon221" x="484" y="944" width="25" height="25" environment="kU10" type="station" pos="tp11" header="ТП11"/>
     <elib:switcher id="polygon149" x="809" y="83" width="25" height="25" environment="kU6" type="disconnector" pos="rz154" initstate="on" rotate="90" header="Р154"/>
-    <elib:switcher x="370" y="556" height="25" width="25" id="V29" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn174" roff="" initstate="on" header="ВН174"/>
+    <elib:switcher x="370" y="576" height="25" width="25" id="V29" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn174" roff="" initstate="on" header="ВН174"/>
     <elib:switcher id="polygon4397" x="74" y="980" width="25" height="25" environment="kU6" type="station" pos="tp236" header="ТП236"/>
     <elib:switcher id="polygon222" x="533" y="943" width="25" height="25" environment="kU10" type="station" header="ТП13" pos="tp13"/>
-    <elib:switcher id="polygon30" x="201" y="525" width="25" height="25" environment="kU6" type="disconnector" pos="rztp20" initstate="on" rotate="90" header="ТП20 Р"/>
+    <elib:switcher id="polygon30" x="201" y="536" width="25" height="25" environment="kU6" type="disconnector" pos="rztp20" initstate="on" rotate="90" header="ТП20 Р"/>
     <elib:switcher id="polygon111" x="572" y="607" width="25" height="25" environment="kU6" type="station" pos="tp288" header="ТП288"/>
     <elib:switcher id="polygon145" x="661" y="137" width="25" height="25" environment="kU6" type="station" header="ТП119" pos="tp119"/>
     <elib:switcher id="polygon223" x="553" y="847" width="25" height="25" environment="kU10" type="station" header="ТП386" pos="tp386"/>
@@ -1204,7 +1204,7 @@
     <elib:switcher id="polygon238" x="1121" y="134" width="25" height="25" environment="kU6" type="station" pos="tp106" header="ТП106"/>
     <elib:switcher id="polygon31" x="208" y="590" width="25" height="25" environment="kU6" type="station" pos="tp270" header="ТП270"/>
     <elib:switcher id="polygon106" x="582" y="553" width="25" height="25" environment="kU6" type="station" header="ТП145" pos="tp145"/>
-    <elib:switcher x="246" y="523" height="25" width="25" id="V13" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn11" roff="" initstate="on" header="ВН11"/>
+    <elib:switcher x="246" y="503" height="25" width="25" id="V13" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn11" roff="" initstate="on" header="ВН11"/>
     <elib:switcher x="1252" y="698" height="25" width="25" id="V81" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rz74" roff="" initstate="on" header="Р74"/>
     <elib:switcher x="1247" y="101" height="25" width="25" id="switcher18" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rz48" roff="" initstate="on" header="Р48"/>
     <elib:switcher id="polygon71" x="343" y="331" width="25" height="25" environment="kU6" type="disconnector" pos="rz129" initstate="on" rotate="90" header="Р129"/>
@@ -1252,7 +1252,7 @@
     <elib:switcher id="polygon92" x="685" y="436" width="25" height="25" environment="kU6" type="station" pos="tp370" header="ТП370"/>
     <elib:switcher x="1731" y="102" height="25" width="25" id="switcher21" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rztp602" roff="" initstate="on" header="ТП602 Р"/>
     <elib:switcher id="polygon40" x="149" y="758" width="25" height="25" environment="kU6" type="station" header="ТП266" pos="tp266"/>
-    <elib:switcher id="polygon176" x="1188" y="524" width="35" height="35" environment="kU6" type="breakerp" initstate="on" pos="vs55" rotate="0" header="ВС55"/>
+    <elib:switcher id="polygon176" x="1188" y="484" width="35" height="35" environment="kU6" type="breakerp" initstate="on" pos="vs55" rotate="0" header="ВС55"/>
     <elib:switcher id="polygon250" x="1732" y="142" width="25" height="25" environment="kU6" type="station" header="ТП602" pos="tp602"/>
     <elib:switcher id="polygon46" x="178" y="1027" width="25" height="25" environment="kU10" type="disconnector" pos="rz15_1" initstate="on" rotate="90" header="Р15-1"/>
     <elib:switcher id="polygon251" x="1775" y="77" width="25" height="25" environment="kU6" type="disconnector" pos="rz164" initstate="on" rotate="90" header="Р164"/>
@@ -1316,13 +1316,13 @@
     <elib:switcher id="polygon33" x="303" y="650" width="35" height="35" environment="kU10" type="breakerp" initstate="on" pos="vs15" rotate="" header="ВС15"/>
     <elib:switcher x="881" y="276" height="25" width="25" id="V58" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vv18_9" roff="" initstate="on" header="В-3"/>
     <elib:switcher id="polygon141" x="836" y="217" width="35" height="35" environment="kU6" type="breakerp" initstate="on" pos="vs1" rotate="0" header="ВС1"/>
-    <elib:switcher id="polygon182" x="1158" y="568" width="25" height="25" environment="kU6" type="station" header="ТП323" pos="tp323"/>
+    <elib:switcher id="polygon182" x="1158" y="539" width="25" height="25" environment="kU6" type="station" header="ТП323" pos="tp323"/>
     <elib:switcher id="polygon269" x="1101" y="956" width="25" height="25" environment="kU6" type="disconnector" pos="rz122" initstate="on" rotate="90" header="Р138"/>
     <elib:switcher id="polygon142" x="757" y="246" width="25" height="25" environment="kU6" type="disconnector" pos="rz25" initstate="on" rotate="90" header="Р25"/>
     <elib:switcher id="polygon270" x="1065" y="956" width="25" height="25" environment="kU6" type="station" pos="tp335" header="ТП335"/>
     <elib:switcher id="polygon80" x="713" y="676" width="35" height="35" environment="kU6" type="breakerp" initstate="on" pos="vs36" rotate="" header="ВС36"/>
     <elib:switcher x="281" y="655" height="25" width="25" id="V16" type="transformator1" state="" environment="kU10" filter="" rotate="" pos="vv18" roff="" initstate="none" header="В-18"/>
-    <elib:switcher id="polygon184" x="1129" y="529" width="25" height="25" environment="kU6" type="disconnector" pos="rz102" initstate="on" rotate="90" header="Р102"/>
+    <elib:switcher id="polygon184" x="1129" y="489" width="25" height="25" environment="kU6" type="disconnector" pos="rz102" initstate="on" rotate="90" header="Р102"/>
     <elib:switcher id="polygon271" x="1258" y="850" width="25" height="25" environment="kU6" type="station" pos="tp329" header="ТП329"/>
     <elib:switcher id="polygon81" x="713" y="711" width="35" height="35" environment="kU6" type="breakerp" initstate="on" pos="vs37" rotate="" header="ВС37"/>
     <elib:switcher x="296" y="603" height="25" width="25" id="switcher4" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rz123" roff="" initstate="on" header="Р123"/>
@@ -1336,9 +1336,9 @@
     <elib:switcher id="polygon82" x="764" y="711" width="35" height="35" environment="kU6" type="breakerp" initstate="on" pos="vs38" rotate="" header="ВС38"/>
     <elib:switcher x="417" y="1001" height="25" width="25" id="V91" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz95" roff="" initstate="on" header="Р95"/>
     <elib:switcher id="polygon274" x="1357" y="900" width="35" height="35" environment="kU6" type="breakerp" initstate="on" pos="vs30" rotate="0" header="ВС30"/>
-    <elib:switcher id="polygon185" x="1076" y="529" width="25" height="25" environment="kU6" type="disconnector" pos="rz16" initstate="on" rotate="90" header="Р16"/>
+    <elib:switcher id="polygon185" x="1076" y="489" width="25" height="25" environment="kU6" type="disconnector" pos="rz16" initstate="on" rotate="90" header="Р16"/>
     <elib:switcher id="polygon151" x="970" y="241" width="35" height="35" environment="kU6" type="breakerp" initstate="on" pos="vs7" rotate="0" header="ВС7"/>
-    <elib:switcher id="polygon186" x="1041" y="529" width="25" height="25" environment="kU6" type="station" pos="tp138" header="ТП138"/>
+    <elib:switcher id="polygon186" x="1041" y="489" width="25" height="25" environment="kU6" type="station" pos="tp138" header="ТП138"/>
     <elib:switcher id="polygon275" x="1236" y="903" width="25" height="25" environment="kU6" type="disconnector" pos="rztp330" initstate="on" rotate="90" header="ТП330 Р"/>
     <elib:switcher id="polygon110" x="605" y="678" width="25" height="25" environment="kU6" type="station" header="ТП38" pos="tp38"/>
     <elib:switcher id="polygon276" x="1200" y="903" width="25" height="25" environment="kU6" type="station" pos="tp330" header="ТП330"/>
@@ -1352,26 +1352,26 @@
     <elib:switcher id="polygon114" x="888" y="818" width="25" height="25" environment="kU6" type="disconnector" rotate="90" initstate="on" pos="rs246_1" header="ТП246 РШ1"/>
     <elib:switcher id="polygon279" x="1298" y="995" width="25" height="25" environment="kU6" type="station" header="ТП328" pos="tp328"/>
     <elib:switcher id="polygon4417" x="194" y="379" width="25" height="25" environment="kU6" type="station" header="ТП36" pos="tp36"/>
-    <elib:switcher x="1105" y="488" height="25" width="25" id="V83" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rz104" roff="" initstate="on" header="Р104"/>
+    <elib:switcher x="1105" y="448" height="25" width="25" id="V83" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rz104" roff="" initstate="on" header="Р104"/>
     <elib:switcher id="polygon4389" x="74" y="881" width="25" height="25" environment="kU6" type="station" pos="tp34" header="ТП34"/>
     <elib:switcher id="polygon280" x="1220" y="1024" width="25" height="25" environment="kU6" type="station" header="ТП331" pos="tp331"/>
     <elib:switcher id="polygon9" x="186" y="276" width="25" height="25" environment="kU6" type="station" header="ТП26" pos="tp26"/>
     <elib:switcher x="308" y="690" height="25" width="25" id="switcher7" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz12" roff="" initstate="on" header="Р12"/>
     <elib:switcher id="polygon281" x="1299" y="1024" width="25" height="25" environment="kU6" type="station" pos="tp343" header="ТП343"/>
-    <elib:switcher x="1105" y="437" height="25" width="25" id="V84" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rz105" roff="" initstate="on" header="Р105"/>
+    <elib:switcher x="1105" y="397" height="25" width="25" id="V84" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rz105" roff="" initstate="on" header="Р105"/>
     <elib:switcher id="polygon47" x="241" y="965" width="25" height="25" environment="kU10" type="station" pos="tp48" header="ТП48"/>
     <elib:switcher id="polygon282" x="1435" y="868" width="35" height="35" environment="kU6" type="breakerp" initstate="on" pos="vs49" rotate="0" header="ВС49"/>
     <elib:switcher x="766" y="358" height="25" width="25" id="V31" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn25" roff="" initstate="on" header="ВН25"/>
     <elib:switcher id="polygon156" x="1081" y="140" width="25" height="25" environment="kU6" type="station" pos="tp105" header="ТП105"/>
     <elib:switcher id="polygon283" x="1485" y="868" width="35" height="35" environment="kU6" type="breakerp" initstate="on" pos="vs22" rotate="0" header="ВС22"/>
     <elib:switcher x="766" y="397" height="25" width="25" id="V32" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn26" roff="" initstate="on" header="ВН26"/>
-    <elib:switcher id="polygon187" x="1105" y="392" width="25" height="25" environment="kU6" type="station" pos="tp309" header="ТП309"/>
-    <elib:switcher id="polygon115" x="923" y="805" width="25" height="25" environment="kU6" type="breaker" pos="vn164" initstate="on" header="ВН164"/>
+    <elib:switcher id="polygon187" x="1105" y="352" width="25" height="25" environment="kU6" type="station" pos="tp309" header="ТП309"/>
+    <elib:switcher id="polygon115" x="918" y="805" width="25" height="25" environment="kU6" type="breaker" pos="vn164" initstate="on" header="ВН164"/>
     <elib:switcher id="polygon36" x="76" y="671" width="25" height="25" environment="kU6" type="disconnector" pos="rztp32" initstate="on" rotate="90" header="ТП32 Р"/>
     <elib:switcher id="polygon284" x="1552" y="873" width="25" height="25" environment="kU6" type="disconnector" pos="rz79" initstate="on" rotate="90" header="Р79"/>
     <elib:switcher id="polygon285" x="1597" y="875" width="25" height="25" environment="kU6" type="station" pos="tp406" header="ТП406"/>
     <elib:switcher id="polygon4419" x="194" y="400" width="25" height="25" environment="kU6" type="station" pos="tp243" header="ТП243"/>
-    <elib:switcher id="polygon188" x="1146" y="462" width="25" height="25" environment="kU6" type="station" header="ТП367" pos="tp367"/>
+    <elib:switcher id="polygon188" x="1146" y="422" width="25" height="25" environment="kU6" type="station" header="ТП367" pos="tp367"/>
     <elib:switcher id="polygon49" x="345" y="969" width="25" height="25" environment="kU10" type="station" pos="tp12" header="ТП12"/>
     <elib:switcher id="polygon152" x="923" y="246" width="25" height="25" environment="kU6" type="disconnector" pos="rz108" initstate="on" rotate="90" header="Р108"/>
     <elib:switcher id="polygon286" x="1553" y="908" width="25" height="25" environment="kU6" type="disconnector" pos="rz59" initstate="on" rotate="90" header="Р59"/>
@@ -1381,7 +1381,7 @@
     <elib:switcher id="polygon157" x="1207" y="208" width="35" height="35" environment="kU6" type="breakerp" initstate="on" pos="vs2" rotate="0" header="ВС2"/>
     <elib:switcher id="polygon288" x="1595" y="937" width="25" height="25" environment="kU6" type="station" pos="tp300" header="ТП300"/>
     <elib:switcher x="767" y="434" height="25" width="25" id="V33" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn27" roff="" initstate="on" header="ВН27"/>
-    <elib:switcher id="polygon190" x="1104" y="559" width="25" height="25" environment="kU6" type="station" header="ТП294" pos="tp294"/>
+    <elib:switcher id="polygon190" x="1104" y="540" width="25" height="25" environment="kU6" type="station" header="ТП294" pos="tp294"/>
     <elib:switcher id="polygon289" x="1595" y="961" width="25" height="25" environment="kU6" type="station" header="ТП301" pos="tp301"/>
     <elib:switcher x="44" y="72" height="25" width="25" id="V5" type="transformator1" state="" environment="kU10" filter="" rotate="" pos="1" roff="" initstate="none" header="В-18"/>
     <elib:switcher id="polygon50" x="267" y="706" width="25" height="25" environment="kU10" type="station" pos="tp21" header="ТП21"/>
@@ -1434,90 +1434,90 @@
     <elib:switcher id="polygon54" x="212" y="925" width="25" height="25" environment="kU6" type="disconnector" pos="rztp154" initstate="on" rotate="90" header="ТП154 Р"/>
     <elib:switcher x="21" y="379" height="25" width="25" id="switcher1" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rz143" roff="" initstate="on" header="Р143"/>
     <elib:switcher id="polygon23" x="112" y="590" width="25" height="25" environment="kU6" type="station" pos="tp330" header="ТП330"/>
-    <elib:switcher x="927" y="508" height="25" width="25" id="V39" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn31" roff="" initstate="on" header="ВН31"/>
+    <elib:switcher x="903" y="493" height="25" width="25" id="V39" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn31" roff="" initstate="on" header="ВН31"/>
     <elib:switcher x="1662" y="434" height="25" width="25" id="V125" type="breaker" state="" environment="kU10" filter="" rotate="" pos="vn159" roff="" initstate="on" header="ВН159"/>
     <elib:switcher id="polygon159" x="1227" y="433" width="35" height="35" environment="kU6" type="breakerp" initstate="on" pos="vs10" rotate="0" header="ВС2"/>
     <elib:switcher id="polygon296" x="1703" y="445" width="25" height="25" environment="kU10" type="disconnector" rotate="90" initstate="off" pos="rs8_1" header="ТП8 РШ1"/>
-    <elib:switcher x="971" y="508" height="25" width="25" id="V40" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn32" roff="" initstate="on" header="ВН32"/>
+    <elib:switcher x="947" y="493" height="25" width="25" id="V40" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn32" roff="" initstate="on" header="ВН32"/>
     <elib:switcher id="polygon4217" x="197" y="107" width="25" height="25" environment="kU6" type="disconnector" pos="rztp272" initstate="on" rotate="90" header="ТП272 Р"/>
     <elib:switcher id="polygon196" x="1405" y="140" width="25" height="25" environment="kU6" type="station" header="ТП442" pos="tp442"/>
     <elib:switcher x="1748" y="434" height="25" width="25" id="V126" type="breaker" state="" environment="kU10" filter="" rotate="" pos="vn158" roff="" initstate="on" header="ВН158"/>
     <elib:switcher x="458" y="105" height="25" width="25" id="switcher10" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rz45" roff="" initstate="on" header="Р45"/>
     <elib:switcher id="polygon14" x="21" y="415" width="25" height="25" environment="kU6" type="station" header="ТП351" pos="tp351"/>
     <elib:switcher x="307" y="733" height="25" width="25" id="V17" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz5" roff="" initstate="on" header="Р5"/>
-    <elib:switcher x="1676" y="530" height="25" width="25" id="V127" type="breaker" state="" environment="kU10" filter="" rotate="" pos="vn3k" roff="" initstate="on" header="ВН3K"/>
+    <elib:switcher x="1670" y="567" height="25" width="25" id="V127" type="breaker" state="" environment="kU10" filter="" rotate="" pos="vn3k" roff="" initstate="on" header="ВН3K"/>
     <elib:switcher id="polygon197" x="1292" y="220" width="25" height="25" environment="kU6" type="station" header="ТП106" pos="tp106"/>
-    <elib:switcher id="polygon297" x="1715" y="514" width="25" height="25" environment="kU10" type="disconnector" rotate="90" initstate="off" pos="rs3K_1" header="ТП3К РШ1"/>
+    <elib:switcher id="polygon297" x="1709" y="551" width="25" height="25" environment="kU10" type="disconnector" rotate="90" initstate="off" pos="rs3K_1" header="ТП3К РШ1"/>
     <elib:switcher id="polygon55" x="173" y="933" width="25" height="25" environment="kU10" type="station" header="ТП275" pos="tp275"/>
     <elib:switcher id="polygon97" x="582" y="489" width="25" height="25" environment="kU6" type="station" pos="tp54" header="ТП54"/>
-    <elib:switcher id="polygon86" x="795" y="536" width="25" height="25" environment="kU6" type="breaker" initstate="on" pos="vn29" header="ВН29"/>
-    <elib:switcher x="1760" y="530" height="25" width="25" id="V128" type="breaker" state="" environment="kU10" filter="" rotate="" pos="vn4k" roff="" initstate="on" header="ВН4K"/>
+    <elib:switcher id="polygon86" x="798" y="563" width="25" height="25" environment="kU6" type="breaker" initstate="on" pos="vn29" header="ВН29"/>
+    <elib:switcher x="1754" y="567" height="25" width="25" id="V128" type="breaker" state="" environment="kU10" filter="" rotate="" pos="vn4k" roff="" initstate="on" header="ВН4K"/>
     <elib:switcher id="polygon4219" x="235" y="108" width="25" height="25" environment="kU6" type="station" header="ТП272" pos="tp272"/>
     <elib:switcher id="polygon15" x="159" y="325" width="25" height="25" environment="kU6" type="station" pos="tp425" header="ТП425"/>
     <elib:switcher id="polygon198" x="1400" y="217" width="25" height="25" environment="kU6" type="station" pos="tp110" header="ТП110"/>
     <elib:switcher id="polygon56" x="173" y="912" width="25" height="25" environment="kU10" type="station" pos="tp154" header="ТП154"/>
-    <elib:switcher x="1676" y="589" height="25" width="25" id="V129" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz12k" roff="" initstate="on" header="Р12К"/>
-    <elib:switcher id="polygon87" x="860" y="536" width="25" height="25" environment="kU6" type="breaker" pos="vn104" initstate="on" header="ВН104"/>
+    <elib:switcher x="1668" y="611" height="25" width="25" id="V129" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz12k" roff="" initstate="on" header="Р12К"/>
+    <elib:switcher id="polygon87" x="863" y="563" width="25" height="25" environment="kU6" type="breaker" pos="vn104" initstate="on" header="ВН104"/>
     <elib:switcher x="951" y="180" height="25" width="25" id="V61" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn108" roff="" initstate="on" header="ВН108"/>
-    <elib:switcher id="polygon298" x="1717" y="600" width="25" height="25" environment="kU10" type="disconnector" rotate="90" initstate="off" pos="rs2K_1" header="ТП2К РШ1"/>
+    <elib:switcher id="polygon298" x="1709" y="622" width="25" height="25" environment="kU10" type="disconnector" rotate="90" initstate="off" pos="rs2K_1" header="ТП2К РШ1"/>
     <elib:switcher id="polygon160" x="1302" y="365" width="25" height="25" environment="kU6" type="station" header="ТП140" pos="tp140"/>
-    <elib:switcher x="1760" y="589" height="25" width="25" id="V130" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz1k" roff="" initstate="on" header="Р1K"/>
+    <elib:switcher x="1752" y="611" height="25" width="25" id="V130" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz1k" roff="" initstate="on" header="Р1K"/>
     <elib:switcher id="polygon4231" x="236" y="207" width="25" height="25" environment="kU6" type="station" header="ТП277" pos="tp277"/>
-    <elib:switcher x="1760" y="616" height="25" width="25" id="V131" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz2k" roff="" initstate="on" header="Р2К"/>
+    <elib:switcher x="1752" y="638" height="25" width="25" id="V131" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz2k" roff="" initstate="on" header="Р2К"/>
     <elib:switcher x="81" y="42" height="25" width="25" id="V0" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vv21_18" roff="" initstate="on" header="В-21-18"/>
-    <elib:switcher id="polygon88" x="829" y="522" width="25" height="25" environment="kU6" type="disconnector" rotate="90" initstate="on" pos="rs117_1" header="ТП117 РШ1"/>
-    <elib:switcher x="1676" y="616" height="25" width="25" id="V132" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz11k" roff="" initstate="on" header="Р11К"/>
+    <elib:switcher id="polygon88" x="832" y="549" width="25" height="25" environment="kU6" type="disconnector" rotate="90" initstate="on" pos="rs117_1" header="ТП117 РШ1"/>
+    <elib:switcher x="1668" y="638" height="25" width="25" id="V132" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz11k" roff="" initstate="on" header="Р11К"/>
     <elib:switcher id="polygon199" x="1327" y="261" width="25" height="25" environment="kU6" type="station" pos="tp107" header="ТП107"/>
     <elib:switcher id="polygon116" x="950" y="805" width="25" height="25" environment="kU6" type="breaker" pos="vn163" initstate="off" header="ВН163"/>
-    <elib:switcher x="1676" y="673" height="25" width="25" id="V133" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz9k" roff="" initstate="on" header="Р9К"/>
+    <elib:switcher x="1668" y="695" height="25" width="25" id="V133" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz9k" roff="" initstate="on" header="Р9К"/>
     <elib:switcher x="307" y="778" height="25" width="25" id="V18" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz4" roff="" initstate="on" header="Р4"/>
     <elib:switcher id="polygon200" x="1362" y="217" width="25" height="25" environment="kU6" type="station" header="ТП109" pos="tp109"/>
-    <elib:switcher x="1760" y="673" height="25" width="25" id="V134" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz7k" roff="" initstate="on" header="Р7К"/>
-    <elib:switcher id="polygon89" x="860" y="508" width="25" height="25" environment="kU6" type="breaker" pos="vn30" initstate="on" header="ВН30"/>
-    <elib:switcher id="polygon299" x="1716" y="686" width="25" height="25" environment="kU10" type="disconnector" rotate="90" initstate="off" pos="rs1K_1" header="ТП1К РШ1"/>
+    <elib:switcher x="1752" y="695" height="25" width="25" id="V134" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz7k" roff="" initstate="on" header="Р7К"/>
+    <elib:switcher id="polygon89" x="863" y="535" width="25" height="25" environment="kU6" type="breaker" pos="vn30" initstate="on" header="ВН30"/>
+    <elib:switcher id="polygon299" x="1708" y="708" width="25" height="25" environment="kU10" type="disconnector" rotate="90" initstate="off" pos="rs1K_1" header="ТП1К РШ1"/>
     <elib:switcher x="1322" y="463" height="25" width="25" id="V70" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn131" roff="" initstate="on" header="ВН131"/>
     <elib:switcher x="1025" y="637" height="25" width="25" id="V52" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn24" roff="" initstate="on" header="ВН24"/>
-    <elib:switcher x="1676" y="747" height="25" width="25" id="V135" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz6k" roff="" initstate="on" header="Р6К"/>
+    <elib:switcher x="1668" y="769" height="25" width="25" id="V135" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz6k" roff="" initstate="on" header="Р6К"/>
     <elib:switcher id="polygon201" x="1479" y="449" width="25" height="25" environment="kU6" type="station" header="ТП132" pos="tp132"/>
     <elib:switcher id="polygon57" x="369" y="834" width="25" height="25" environment="kU10" type="disconnector" pos="rz92" initstate="on" rotate="90" header="Р92"/>
-    <elib:switcher id="polygon300" x="1716" y="758" width="25" height="25" environment="kU10" type="disconnector" rotate="90" initstate="off" pos="rsKJ_1" header="ТП КЖ РШ1"/>
+    <elib:switcher id="polygon300" x="1708" y="780" width="25" height="25" environment="kU10" type="disconnector" rotate="90" initstate="off" pos="rsKJ_1" header="ТП КЖ РШ1"/>
     <elib:switcher x="1322" y="503" height="25" width="25" id="V71" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn132" roff="" initstate="on" header="ВН132"/>
-    <elib:switcher x="1760" y="747" height="25" width="25" id="V136" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz5k" roff="" initstate="on" header="Р5К"/>
+    <elib:switcher x="1752" y="769" height="25" width="25" id="V136" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz5k" roff="" initstate="on" header="Р5К"/>
     <elib:switcher x="715" y="315" height="25" width="25" id="V41" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vv18_19" roff="" initstate="on" header="B-18-19"/>
-    <elib:switcher x="1760" y="774" height="25" width="25" id="V137" type="breakerp" state="" environment="kU10" filter="" rotate="" pos="vs2k" roff="" initstate="off" header="ВС2К"/>
+    <elib:switcher x="1752" y="796" height="25" width="25" id="V137" type="breakerp" state="" environment="kU10" filter="" rotate="" pos="vs2k" roff="" initstate="off" header="ВС2К"/>
     <elib:switcher x="1535" y="357" height="25" width="25" id="V87" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rz21" roff="" initstate="on" header="Р21"/>
     <elib:switcher id="polygon144" x="640" y="209" width="25" height="25" environment="kU6" type="station" pos="tp114" header="ТП114"/>
-    <elib:switcher x="1676" y="774" height="25" width="25" id="V138" type="breakerp" state="" environment="kU10" filter="" rotate="" pos="vs1k" roff="" initstate="on" header="ВС1К"/>
+    <elib:switcher x="1668" y="796" height="25" width="25" id="V138" type="breakerp" state="" environment="kU10" filter="" rotate="" pos="vs1k" roff="" initstate="on" header="ВС1К"/>
     <elib:switcher x="245" y="571" height="25" width="25" id="switcher2" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rz135" roff="" initstate="off" header="Р135"/>
     <elib:switcher id="polygon202" x="1534" y="318" width="25" height="25" environment="kU6" type="station" pos="tp461" header="ТП461"/>
     <elib:switcher x="314" y="38" height="25" width="25" id="V3" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vv21_1" roff="" initstate="on" header="В-21-1"/>
     <elib:switcher x="996" y="180" height="25" width="25" id="V62" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn109" roff="" initstate="on" header="ВН109"/>
-    <elib:switcher x="1676" y="831" height="25" width="25" id="V139" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="В13"/>
+    <elib:switcher x="1668" y="853" height="25" width="25" id="V139" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="В13"/>
     <elib:switcher id="polygon38" x="83" y="717" width="25" height="25" environment="kU6" type="station" header="ТП214" pos="tp214"/>
     <elib:switcher id="polygon203" x="1498" y="380" width="25" height="25" environment="kU6" type="station" header="ТП144" pos="tp144"/>
     <elib:switcher x="186" y="44" height="25" width="25" id="V2" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vv21_11" roff="" initstate="on" header="В-21-11"/>
-    <elib:switcher x="1760" y="831" height="25" width="25" id="V140" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header=""/>
+    <elib:switcher x="1752" y="853" height="25" width="25" id="V140" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header=""/>
     <elib:switcher id="polygon204" x="1498" y="406" width="25" height="25" environment="kU6" type="station" pos="tp197" header="ТП197"/>
     <elib:switcher x="765" y="315" height="25" width="25" id="V42" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vv18_8" roff="" initstate="on" header="B-18-8"/>
-    <elib:switcher id="polygon301" x="1715" y="844" width="25" height="25" environment="kU10" type="disconnector" rotate="90" initstate="off" pos="rs1_1" header="РП1 РШ1"/>
-    <elib:switcher x="1675" y="701" height="25" width="25" id="V141" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz10k" roff="" initstate="on" header="Р10К"/>
+    <elib:switcher id="polygon301" x="1707" y="866" width="25" height="25" environment="kU10" type="disconnector" rotate="90" initstate="off" pos="rs1_1" header="РП1 РШ1"/>
+    <elib:switcher x="1667" y="723" height="25" width="25" id="V141" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz10k" roff="" initstate="on" header="Р10К"/>
     <elib:switcher x="314" y="6" height="25" width="25" id="V7" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vv21_19" roff="" initstate="on" header="ВB-21-19"/>
     <elib:switcher x="815" y="314" height="25" width="25" id="V43" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vv18_13" roff="" initstate="on" header="B-18-13"/>
-    <elib:switcher x="1760" y="701" height="25" width="25" id="V142" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz8k" roff="" initstate="on" header="Р8К"/>
+    <elib:switcher x="1752" y="723" height="25" width="25" id="V142" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rz8k" roff="" initstate="on" header="Р8К"/>
     <elib:switcher x="22" y="635" height="25" width="25" id="switcher5" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rztp387" roff="" initstate="on" header="ТП387 Р"/>
-    <elib:switcher x="1676" y="856" height="25" width="25" id="V143" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="ВН157"/>
-    <elib:switcher x="1760" y="856" height="25" width="25" id="V144" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="ВН156"/>
-    <elib:switcher x="246" y="478" height="25" width="25" id="V12" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn10" roff="" initstate="on" header="ВН10"/>
-    <elib:switcher x="1760" y="913" height="25" width="25" id="V146" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="ВН158"/>
+    <elib:switcher x="1668" y="878" height="25" width="25" id="V143" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="ВН157"/>
+    <elib:switcher x="1752" y="878" height="25" width="25" id="V144" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="ВН156"/>
+    <elib:switcher x="246" y="458" height="25" width="25" id="V12" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn10" roff="" initstate="on" header="ВН10"/>
+    <elib:switcher x="1752" y="935" height="25" width="25" id="V146" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="ВН158"/>
     <elib:switcher id="polygon93" x="517" y="234" width="25" height="25" environment="kU6" type="station" header="ТП147" pos="tp147"/>
     <elib:switcher id="polygon117" x="702" y="805" width="25" height="25" environment="kU6" type="breaker" initstate="on" pos="vn22" header="ВН22"/>
-    <elib:switcher id="polygon302" x="1715" y="926" width="25" height="25" environment="kU10" type="disconnector" rotate="90" initstate="off" pos="rs44p_1" header="ПС44П РШ1"/>
+    <elib:switcher id="polygon302" x="1707" y="948" width="25" height="25" environment="kU10" type="disconnector" rotate="90" initstate="off" pos="rs44p_1" header="ПС44П РШ1"/>
     <elib:switcher id="polygon161" x="1363" y="409" width="25" height="25" environment="kU6" type="station" pos="tp128" header="ТП128"/>
     <elib:switcher id="polygon162" x="1363" y="436" width="25" height="25" environment="kU6" type="station" header="ТП359" pos="tp359"/>
     <elib:switcher x="500" y="1003" height="25" width="25" id="V88" type="breaker" state="" environment="kU10" filter="" rotate="" pos="vv46_19" roff="" initstate="on" header="В-46-19"/>
     <elib:switcher x="589" y="1003" height="25" width="25" id="V89" type="breaker" state="" environment="kU10" filter="" rotate="" pos="vv46_20" roff="" initstate="on" header="В-46-20"/>
-    <elib:switcher x="1820" y="545" height="25" width="25" id="V147" type="breaker" state="" environment="kU10" filter="" rotate="" pos="vn2k" roff="" initstate="on" header="ВН2K"/>
-    <elib:switcher x="1820" y="575" height="25" width="25" id="V148" type="breaker" state="" environment="kU10" filter="" rotate="" pos="vn1k" roff="" initstate="on" header="ВН1K"/>
+    <elib:switcher x="1812" y="567" height="25" width="25" id="V147" type="breaker" state="" environment="kU10" filter="" rotate="" pos="vn2k" roff="" initstate="on" header="ВН2K"/>
+    <elib:switcher x="1812" y="597" height="25" width="25" id="V148" type="breaker" state="" environment="kU10" filter="" rotate="" pos="vn1k" roff="" initstate="on" header="ВН1K"/>
     <elib:switcher id="polygon4377" x="74" y="752" width="25" height="25" environment="kU6" type="station" pos="tp244" header="ТП244"/>
     <elib:switcher id="polygon24" x="110" y="522" width="25" height="25" environment="kU6" type="station" pos="tp152" header="ТП152"/>
     <elib:switcher x="865" y="315" height="25" width="25" id="V44" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vv18_12" roff="" initstate="on" header="B-18-12"/>
@@ -1525,18 +1525,18 @@
     <elib:switcher id="polygon4391" x="74" y="903" width="25" height="25" environment="kU6" type="station" pos="tp221" header="ТП221"/>
     <elib:switcher id="polygon4393" x="74" y="925" width="25" height="25" environment="kU6" type="station" header="ТП317" pos="tp317"/>
     <elib:switcher x="1323" y="550" height="25" width="25" id="V72" type="breaker" state="" environment="kU110" filter="" rotate="" pos="" roff="" initstate="" header=""/>
-    <elib:switcher x="1677" y="940" height="25" width="25" id="V145" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="ВН157"/>
-    <elib:switcher x="1761" y="940" height="25" width="25" id="V149" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="ВН156"/>
+    <elib:switcher x="1669" y="962" height="25" width="25" id="V145" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="ВН157"/>
+    <elib:switcher x="1753" y="962" height="25" width="25" id="V149" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="ВН156"/>
     <elib:switcher x="458" y="55" height="25" width="25" id="switcher11" type="disconnector" state="" environment="kU6" filter="" rotate="" pos="rztp326" roff="" initstate="on" header="ТП326 Р"/>
     <elib:switcher x="457" y="999" height="25" width="25" id="V90" type="disconnector" state="" environment="kU10" filter="" rotate="" pos="rztp190" roff="" initstate="on" header="ТП190 Р"/>
     <elib:switcher id="polygon16" x="104" y="379" width="25" height="25" environment="kU6" type="station" pos="tp15" header="ТП15"/>
     <elib:switcher x="1005" y="389" height="25" width="25" id="V45" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn35" roff="" initstate="on" header="ВН35"/>
     <elib:switcher id="polygon17" x="104" y="400" width="25" height="25" environment="kU6" type="station" header="ТП16" pos="tp16"/>
-    <elib:switcher x="1677" y="912" height="25" width="25" id="V150" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="ВН158"/>
+    <elib:switcher x="1669" y="934" height="25" width="25" id="V150" type="breaker" state="" environment="kU10" filter="" rotate="" pos="" roff="" initstate="on" header="ВН158"/>
     <elib:switcher x="870" y="362" height="25" width="25" id="V46" type="breaker" state="" environment="kU6" filter="" rotate="" pos="vn4" roff="" initstate="off" header="ВН4"/>
-    <elib:switcher id="polygon303" x="1678" y="997" width="25" height="25" environment="kU10" type="station" pos=""/>
+    <elib:switcher id="polygon303" x="1670" y="1019" width="25" height="25" environment="kU10" type="station" pos=""/>
     <elib:switcher id="polygon18" x="104" y="421" width="25" height="25" environment="kU6" type="station" pos="tp226" header="ТП266"/>
-    <elib:switcher id="polygon304" x="1760" y="998" width="25" height="25" environment="kU10" type="station"/>
+    <elib:switcher id="polygon304" x="1752" y="1020" width="25" height="25" environment="kU10" type="station"/>
     <elib:switcher id="polygon205" x="458" y="1036" width="25" height="25" environment="kU10" type="station" pos="tp190" header="ТП190"/>
     <elib:switcher id="polygon53" x="409" y="813" width="25" height="25" environment="kU10" type="station" header="ТП35" pos="tp35"/>
     <elib:switcher id="polygon90" x="841" y="403" width="25" height="25" environment="kU6" type="station" header="ТП230" pos="tp230"/>
@@ -1583,4 +1583,4 @@
     <elib:epath stroke-width="4" d=" M1253,394v10" stroke="#bbb" id="epath327" environment="kU400" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1265,281h20v116h-26" stroke="#bbb" id="epath328" environment="kU6" state="1" visible=""/>
     <elib:epath stroke-width="2" d=" M1267,280a6,6 6 0,1 -12 0" stroke="#bbb" id="epath329" environment="kU6" state="1" visible=""/>
-<svg:rect x="1828" y="127" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect0"/><svg:rect x="1828" y="47" width="90" height="75" fill="#444" stroke="#eee" stroke-width="1" id="rect1"/><svg:rect x="1828" y="2" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect2"/><mlib:button id="button0" x="1833" y="48" height="35" width="80" r="2" caption="Журнал" onclick="formclose('journal1');formopen('journal');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/><mlib:button id="button1" x="1832" y="7" height="30" width="80" r="2" caption="Выход" onclick="exit();" color1="#F00" color2="#A00" fontstyle="fill: white; font-size: 12px; font-weight: bold;" kind="red"/><mlib:button id="button3" x="1833" y="82" height="35" width="80" r="2" caption="Экран 3" onclick="formopen('screen3');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/><elib:switcher x="1856" y="130" height="30" width="30" id="switcher28" type="breakg" captionstyle="fill: yellow; stroke:none;" pos="jlog"/></svg:svg>
+<svg:rect x="1828" y="127" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect0"/><svg:rect x="1828" y="47" width="90" height="75" fill="#444" stroke="#eee" stroke-width="1" id="rect1"/><svg:rect x="1828" y="2" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect2"/><mlib:button id="button0" x="1833" y="48" height="35" width="80" r="2" caption="Журнал" onclick="formclose('journal1');formopen('journal');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/><mlib:button id="button1" x="1832" y="7" height="30" width="80" r="2" caption="Выход" onclick="exit();" color1="#F00" color2="#A00" fontstyle="fill: white; font-size: 12px; font-weight: bold;" kind="red"/><mlib:button id="button3" x="1833" y="82" height="35" width="80" r="2" caption="Экран 3" onclick="formopen('screen3');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/><elib:switcher x="1856" y="130" height="30" width="30" id="switcher28" type="breakg" captionstyle="fill: yellow; stroke:none;" pos="jlog"/><elib:eline id="line190" x1="122" x2="122" y1="529" y2="563" stroke-width="2" environment="kU6"/><elib:epath stroke-width="2" d=" M1017,491v14h-49" stroke="#bbb" id="epath331" environment="kUKbl" state="1" visible=""/></svg:svg>
