@@ -2,7 +2,7 @@
 CNFIG_XML = 'start.xml';
 
 function Background() {
-    this.windows_ = [];
+    this.windows_ = {};
 }
 
 var tstdomain = 'http://localhost:8070/pages/';
@@ -22,26 +22,6 @@ Background.prototype.ifShowFrame_ = function () {
 };
 
 Background.prototype.newWindow = function () {
-    /*var options1 = {
-     name: 'screen1',
-     file: 'screen1.xml',
-     bounds: {top: 0,
-     left: 0,
-     width: 1920,
-     height: 1080}
-     }
-     
-     var options2= {
-     name: 'screen2',
-     file: 'screen2.xml',
-     bounds: {top: 0,
-     left: 1920,
-     width: 1920,
-     height: 1080}
-     }
-     
-     this.windowOpen(options1, tstdomain);
-     this.windowOpen(options2, tstdomain);*/
     for (var i = 0; i < this.cofiguration.domains.length; i++) {
         var url = this.cofiguration.domains[i].url;
         for (var nm in this.cofiguration.domains[i].forms) {
@@ -50,10 +30,7 @@ Background.prototype.newWindow = function () {
                 name: nm,
                 file: form.file,
                 hidden: form.hidden ? true : undefined,
-                bounds: {top: 0,
-                    left: 0,
-                    width: 1920,
-                    height: 1080}
+                bounds: form.bounds
             }
             this.windowOpen(options, url);
         }
@@ -74,7 +51,7 @@ Background.prototype.windowOpen = function (option, domain) {
             else {
                 if (option.file && domain) {
                     var winopp = {
-                        id: name,
+                        //id: name,
                         frame: (this.ifShowFrame_() ? 'chrome' : 'none')
                     };
                     for (var key in option)
@@ -82,14 +59,25 @@ Background.prototype.windowOpen = function (option, domain) {
                             winopp[key] = option[key];
                     chrome.app.window.create('screen.html', winopp, function (win) {
                         var wv = win.contentWindow.document.getElementById('webview');
+                        /*if (option.bounds.width && option.bounds.height) 
+                         win.resizeTo(option.bounds.width, option.bounds.height);
+                         if (option.bounds.left || option.bounds.top) 
+                         win.moveTo(option.bounds.left, option.bounds.top);*/
                         if (wv) {
                             wv.setAttribute('src', domain + option.file);
+                            if (option.bounds.width && option.bounds.height) {
+                                wv.setAttribute('style', "width: " + option.bounds.width
+                                        + "px; height: " + +"px;");
+                            }
                         }
                         else {
                             win.contentWindow.onload = function () {
                                 var wv = this.document.getElementById('webview');
                                 if (wv) {
                                     wv.setAttribute('src', domain + option.file);
+                                    if (option.bounds.width && option.bounds.height)
+                                        wv.setAttribute('style', "width: " + option.bounds.width
+                                                + "px; height: " + option.bounds.height + "px;");
                                 }
                             }
                         }
@@ -99,6 +87,16 @@ Background.prototype.windowOpen = function (option, domain) {
             }
         }
     }
+}
+
+Background.prototype.setwebView = function (webView, url, option) {
+    webView.setAttribute('src', url);
+    /*if (option.bounds) {
+     if (option.bounds.width)
+     webView.setAttribute('width', option.bounds.width +'px');
+     if (option.bounds.height)
+     webView.setAttribute('height', option.bounds.height + 'px' );
+     }*/
 }
 
 Background.prototype.windowClose = function (option) {
@@ -111,9 +109,17 @@ Background.prototype.windowClose = function (option) {
     }
 }
 
+buildArg = function (msg) {
+    var it = msg.indexOf(':');
+    if (it >= 0 && (it + 1) < msg.length)
+        return {id: msg.substring(0, it), arg: msg.substring(it + 1)};
+    return {id: msg};
+}
+
 Background.prototype.launch = function (launchData) {
 
-    this.windows_ = [];
+    var this_ = this;
+    this.windows_ = {};
     this.cofiguration = {};
     this.cofiguration.domains = [];
     this.cofiguration.configDoc = null;
@@ -121,14 +127,28 @@ Background.prototype.launch = function (launchData) {
     this.loadConfiguration();
 
     chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-        console.log("message received to background =", message);
-        switch (message) {
+        //console.log("message received to background =", message);
+        var msg = buildArg(message);
+        switch (msg.id) {
             case  '$$exit' :
             {
                 console.log("need exit");
-                var wns = chrome.app.window.getAll();
-                for (var i = 0; i < wns.length; ++i)
-                    wns[i].close()
+                var wns = this_.windows_;
+                for (var key in this_.windows_)
+                    this_.windows_[key].close();
+                this_.windows_ = {};
+                break;
+            }
+            case  'formopen':
+            {
+                console.log("need formopen", msg.arg);
+                this_.formOpen(msg.arg);
+                break;
+            }
+            case  'formclose':
+            {
+                console.log("need formclose", msg.arg);
+                this_.formClose(msg.arg);
                 break;
             }
             default:
@@ -137,11 +157,27 @@ Background.prototype.launch = function (launchData) {
             }
         }
     });
-
-    //if (this.windows_.length == 0)
-    //this.newWindow();
-
 };
+
+
+Background.prototype.formOpen = function (name) {
+    if (this.windows_ && this.windows_[name]) {
+        this.windows_[name].show();
+        this.windows_[name].focus();
+    }
+    else {
+        console.log("form ", name, ' not found');
+    }
+}
+
+Background.prototype.formClose = function (name) {
+    if (this.windows_ && this.windows_[name]) {
+        this.windows_[name].hide();
+    }
+    else {
+        console.log("form ", name, ' not found');
+    }
+}
 
 Background.prototype.onWindowClosed = function (win) {
 };
@@ -202,6 +238,7 @@ Background.prototype.readConfiguration = function (domain) {
 
 
 Background.prototype.readConfigurationAttr = function (domfrm, form) {
+
     for (var k in form.attributes) {
         switch (form.attributes[k].name) {
             case 'file':
@@ -218,11 +255,55 @@ Background.prototype.readConfigurationAttr = function (domfrm, form) {
             }
             default:
             {
-
             }
         }
     }
+    this.calculateBounds(domfrm, form);
 }
+
+Background.prototype.calculateBounds = function (domfrm, form) {
+    var scrwidth = window.screen.width;
+    var scrheight = window.screen.height;
+    var bounds = {};
+    for (var k in form.attributes) {
+        switch (form.attributes[k].name) {
+            case 'left':
+                var left = this.calculateBound(form.attributes[k].value, scrwidth);
+                if (left || left == 0)
+                    bounds.left = left;
+                break;
+            case 'top':
+                var top = this.calculateBound(form.attributes[k].value, scrheight);
+                if (top || top == 0)
+                    bounds.top = top;
+                break;
+            case 'width':
+                var width = this.calculateBound(form.attributes[k].value, scrwidth);
+                if (width || width == 0)
+                    bounds.width = width;
+                break;
+            case 'height':
+                var height = this.calculateBound(form.attributes[k].value, scrheight);
+                if (height || height == 0)
+                    bounds.height = height;
+                break;
+        }
+    }
+    domfrm['bounds'] = bounds;
+}
+
+
+Background.prototype.calculateBound = function (mdem, fulldem) {
+    var res = mdem.toString().trim();
+    if ((res.length > 1) && (res.substring(res.length - 1) == '%'))
+        res = parseInt(res.substring(0, res.length - 1)) * fulldem / 100;
+    else if ((res.length > 2) && (res.substring(res.length - 2) == 'px'))
+        res = parseInt(res.substring(0, res.length - 2));
+    else
+        res = parseInt(res);
+    return (res || res == 0) ? res : undefined;
+}
+
 
 var background = new Background();
 chrome.app.runtime.onLaunched.addListener(background.launch.bind(background));
