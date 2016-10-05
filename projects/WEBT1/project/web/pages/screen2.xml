@@ -5,7 +5,7 @@
          xmlns:elib="http://dvnci/elib" 
          xmlns:xlink="http://www.w3.org/1999/xlink" 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         id="root" width="100%" height="100%" style="background-color: #222;">    
+         id="root" width="1920" height="1280" style="background-color: #222;">    
     <svg:text id="text4477" x="39" y="108" class="elec_f_txt" text="ТП450"/>
     <svg:text id="text4503" x="128" y="232" class="elec_f_on" text="ВС48"/>
     <svg:text id="text4505" x="202" y="223" class="elec_f_txt" text="ТП277"/>

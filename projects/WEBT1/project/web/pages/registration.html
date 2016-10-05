@@ -65,12 +65,13 @@
     </style>     
 
     <script type="text/javascript" src="../web-utils/js/libutil.js"></script>
+    <script type="text/javascript" src="../web-utils/js/remoteutil.js"></script>
     <script type="text/javascript" src="../web-utils/js_ext/jquery/jquery.js"></script>
     <script type="text/javascript" src="../web-utils/js_ext/jqueryui/jquery-ui.min.js"></script>  
 
 
     <script type="text/javascript">
-
+        
 function  progress_show(msg) {
     if (msg) {
         $('#runmodal').dialog({
@@ -145,6 +146,8 @@ function  confirm_show(msg, fn, cfn) {
 
 
 $(function () {
+
+    remoteutil.loader.attach(window.document);
 
     var dialog, form,
             login = $('#login'),
@@ -272,6 +275,7 @@ $(function () {
                 error_show('Ошибка загрузки списка пользователей');
             }
             else {
+                console.log(event);
                 if (event.list.length) {
                     var option = document.createElement("option");
                     option.text = '';
