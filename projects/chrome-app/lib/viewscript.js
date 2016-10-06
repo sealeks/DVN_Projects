@@ -7,14 +7,30 @@ $(function () {
                 webview.contentWindow.postMessage('init', "*");
             }
             catch (error) {
-                console.log("erro postMessage to ", error, webview.getAttribute('src'));
+                console.log("error postMessage to ", error, webview.getAttribute('src'));
             }
         });
     }
 
+    checkApplicationOrigin = function (event) {
+        var origin = event.origin.toString();
+        return origin && (origin.search('chrome-extension://') >= 0);
+    }
+
     window.addEventListener('message', function () {
-        //console.log("return event = ", event);
-        chrome.runtime.sendMessage(event.data);
+        if (event) {
+            //console.log("return event = ", event);           
+            if (checkApplicationOrigin(event)) {
+                if (webview) {
+                    webview.contentWindow.postMessage(event.data, "*");
+                    console.log('post to webview', event);
+                }
+                else
+                    console.log('not find webviw');
+            }
+            else
+                chrome.runtime.sendMessage(event.data);
+        }
     });
 })
 

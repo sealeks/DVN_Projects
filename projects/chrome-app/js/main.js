@@ -21,7 +21,7 @@ Background.prototype.ifShowFrame_ = function () {
             os === 'mac' && version < 25;
 };
 
-Background.prototype.newWindow = function () {
+Background.prototype.newWindow = function (name) {
     for (var i = 0; i < this.cofiguration.domains.length; i++) {
         var url = this.cofiguration.domains[i].url;
         for (var nm in this.cofiguration.domains[i].forms) {
@@ -59,10 +59,6 @@ Background.prototype.windowOpen = function (option, domain) {
                             winopp[key] = option[key];
                     chrome.app.window.create('screen.html', winopp, function (win) {
                         var wv = win.contentWindow.document.getElementById('webview');
-                        /*if (option.bounds.width && option.bounds.height) 
-                         win.resizeTo(option.bounds.width, option.bounds.height);
-                         if (option.bounds.left || option.bounds.top) 
-                         win.moveTo(option.bounds.left, option.bounds.top);*/
                         if (wv) {
                             wv.setAttribute('src', domain + option.file);
                             if (option.bounds.width && option.bounds.height) {
@@ -89,15 +85,6 @@ Background.prototype.windowOpen = function (option, domain) {
     }
 }
 
-Background.prototype.setwebView = function (webView, url, option) {
-    webView.setAttribute('src', url);
-    /*if (option.bounds) {
-     if (option.bounds.width)
-     webView.setAttribute('width', option.bounds.width +'px');
-     if (option.bounds.height)
-     webView.setAttribute('height', option.bounds.height + 'px' );
-     }*/
-}
 
 Background.prototype.windowClose = function (option) {
     if (option) {
@@ -109,7 +96,7 @@ Background.prototype.windowClose = function (option) {
     }
 }
 
-buildArg = function (msg) {
+Background.prototype.buildArg = function (msg) {
     var it = msg.indexOf(':');
     if (it >= 0 && (it + 1) < msg.length)
         return {id: msg.substring(0, it), arg: msg.substring(it + 1)};
@@ -127,38 +114,43 @@ Background.prototype.launch = function (launchData) {
     this.loadConfiguration();
 
     chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-        //console.log("message received to background =", message);
-        var msg = buildArg(message);
+        var msg = this_.buildArg(message);
+        var body = message.arg;
+        var bodyob;
+        try {
+            bodyob = JSON.parse(body);
+        }
+        catch (exception) {
+            bodyob = {};
+        }
         switch (msg.id) {
             case  '$$exit' :
-            {
-                console.log("need exit");
-                var wns = this_.windows_;
-                for (var key in this_.windows_)
-                    this_.windows_[key].close();
-                this_.windows_ = {};
+                this_.$$exit();
                 break;
-            }
             case  'formopen':
-            {
-                console.log("need formopen", msg.arg);
                 this_.formOpen(msg.arg);
                 break;
-            }
             case  'formclose':
-            {
-                console.log("need formclose", msg.arg);
-                this_.formClose(msg.arg);
+                this_.formHide(msg.arg);
                 break;
-            }
+            case  'formhide':
+                this_.formHide(msg.arg);
+                break;
             default:
             {
-
+                this_.allBroadcast(message);
             }
         }
     });
+
 };
 
+
+Background.prototype.$$exit = function (name) {
+    for (var key in this.windows_)
+        this.windows_[key].close();
+    this.windows_ = {};
+}
 
 Background.prototype.formOpen = function (name) {
     if (this.windows_ && this.windows_[name]) {
@@ -166,17 +158,52 @@ Background.prototype.formOpen = function (name) {
         this.windows_[name].focus();
     }
     else {
-        console.log("form ", name, ' not found');
+        if (!this.formFindandOpen(name))
+            console.log("form for open", name, ' not found');
+    }
+}
+
+Background.prototype.formFindandOpen = function (name) {
+    for (var i = 0; i < this.cofiguration.domains.length; i++) {
+        if (this.cofiguration.domains[i].forms[name]) {
+            var url = this.cofiguration.domains[i].url;
+            var form = this.cofiguration.domains[i].forms[name]
+            var options = {
+                name: name,
+                file: form.file,
+                hidden: form.hidden ? true : undefined,
+                bounds: form.bounds
+            }
+            this.windowOpen(options, url);
+            return true;
+        }
     }
 }
 
 Background.prototype.formClose = function (name) {
     if (this.windows_ && this.windows_[name]) {
+        this.windows_[name].close();
+        delete this.windows_[name];
+    }
+    else {
+        console.log("form for close", name, ' not found');
+    }
+}
+
+Background.prototype.formHide = function (name) {
+    if (this.windows_ && this.windows_[name]) {
         this.windows_[name].hide();
     }
     else {
-        console.log("form ", name, ' not found');
+        console.log("form for hide", name, ' not found');
     }
+}
+
+Background.prototype.allBroadcast = function (message) {
+    for (var key in this.windows_)
+        if (this.windows_[key].contentWindow)
+            this.windows_[key].contentWindow.postMessage(message, '*');
+    console.log('neen broadcast message', message);
 }
 
 Background.prototype.onWindowClosed = function (win) {
