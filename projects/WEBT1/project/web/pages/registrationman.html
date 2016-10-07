@@ -6,7 +6,6 @@
         <link rel="stylesheet" media="all" type="text/css" href="../web-utils/js_ext/jqueryui/jquery-ui.css" />
         
         <script type="text/javascript" src="../web-utils/js/libutil.js"></script>
-        <script type="text/javascript" src="../web-utils/js/remoteutil.js"></script>
         <script type="text/javascript" src="../web-utils/js/database.js"></script>     
         <script type="text/javascript" src="../web-utils/js_ext/jquery/jquery.js"></script>
         <script type="text/javascript" src="../web-utils/js_ext/jqueryui/jquery-ui.min.js"></script> 
@@ -39,9 +38,8 @@
                     });
                 }
                 else {
-                   if ($('#runmodal').dialog()){
-                     $('#runmodal').dialog('close');
-                     $('#runmodal').dialog('destroy');}
+                    $('#runmodal').dialog('close');
+                    $('#runmodal').dialog('destroy');
                 }
             }
 
@@ -64,9 +62,8 @@
                 }
                 else {
                     $('#alerttext').html(msg);
-                    if ($('#runmodalalert').dialog()){
-                      $('#runmodalalert').dialog('close');
-                      $('#runmodalalert').dialog('destroy');}
+                    $('#runmodalalert').dialog('close');
+                    $('#runmodalalert').dialog('destroy');
                 }
             }
 
@@ -172,8 +169,6 @@
             }
 
             $(function () {
-                
-                remoteutil.loader.attach(window.document);
 
                 var dialog, form,
                         name = $("#name"),
