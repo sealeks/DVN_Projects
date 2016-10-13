@@ -11,7 +11,7 @@
 <script type="text/javascript" id="startscript"><![CDATA[
 
 ]]></script>
-<project url='http://localhost:8070/pages/'>
+<project url='http://localhost:8080/WebT1/pages/'>
   <form name="screen3" file="screen3.xml" left="100%" top="0%" width="100%" height="100%" caption="screen3" decorated="no" visible="true"/>
   <form name="screen1" file="screen1.xml" left="0%" top="0%" width="100%" height="100%" caption="screen1" decorated="no" visible="true"/>
   <form name="screen2" file="screen2.xml" left="100%" top="0%" width="100%" height="100%" caption="screen2" decorated="no" visible="true"/>
