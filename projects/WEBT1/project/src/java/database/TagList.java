@@ -2,11 +2,10 @@ package database;
 
 import java.io.Serializable;
 import java.util.*;
-import java.sql.*;
 
-public class TgList extends HashMap implements Serializable {
+public class TagList extends HashMap implements Serializable {
 
-    public static class TgListEllement implements Comparable, Serializable {
+    public static class Tag implements Comparable, Serializable {
 
         int tgid;
         String Name;
@@ -16,7 +15,7 @@ public class TgList extends HashMap implements Serializable {
         double maxEU;
         int type;
 
-        public TgListEllement(int itgid,
+        public Tag(int itgid,
                 String iName,
                 String iComment,
                 String iEU,
@@ -40,16 +39,6 @@ public class TgList extends HashMap implements Serializable {
         public String toString() {
             return Name;
         }
-        private double[] norm;
-
-        public double[] getNorm() {
-            return this.norm;
-        }
-
-        public void setNorm(double[] norm) {
-            this.norm = norm;
-        }
-
         public String getName() {
             return Name;
         }
@@ -79,22 +68,21 @@ public class TgList extends HashMap implements Serializable {
         }
     }
 
-    //private NormTable NL;
     private HashMap IntMap = new HashMap();
     private List ObjList = new ArrayList();
 
-    public TgList() {
+    public TagList() {
     }
 
     public List getList() {
         return ObjList;
     }
 
-    public boolean add(TgListEllement val) {
+    public boolean add(Tag val) {
         if (val == null) {
             return false;
         }
-        if (!(val instanceof TgListEllement)) {
+        if (!(val instanceof Tag)) {
             return false;
         }
         if (get(val.Name.toUpperCase()) != null) {
@@ -110,55 +98,21 @@ public class TgList extends HashMap implements Serializable {
         return true;
     }
 
-    public TgListEllement find(String val) {
-        return ((TgListEllement) get(val));
+    public Tag find(String val) {
+        return ((Tag) get(val));
     }
 
-    public TgListEllement find(int tgid) {
-        return ((TgListEllement) IntMap.get(String.valueOf(tgid)));
+    public Tag find(int tgid) {
+        return ((Tag) IntMap.get(String.valueOf(tgid)));
     }
 
     public int FindId(String val) {
         String val_ = val.toUpperCase();
-        TgListEllement temp_ = find(val_);
+        Tag temp_ = find(val_);
         if (temp_ == null) {
             return -1;
         }
         return temp_.tgid;
-    }
-
-    public double[] FindNorm_(String val) {
-        String val_ = val.toUpperCase();
-        TgListEllement temp_ = find(val_);
-        if (temp_ == null) {
-            return null;
-        }
-        return temp_.getNorm();
-    }
-
-    public double FindNorm(String val, int id_) {
-        double[] vl = FindNorm_(val);
-        if (vl == null) {
-            return 0;
-        }
-        if (id_ >= vl.length) {
-            return 0;
-        }
-        return vl[id_];
-    }
-
-    public void AddNorm(String val, double[] s) {
-        val = val.toUpperCase();
-        TgListEllement temp_ = find(val);
-        if (temp_ == null) {
-            return;
-        }
-        temp_.setNorm(s);
-    }
-
-    public boolean isNorm(String val) {
-        double[] vl = FindNorm_(val);
-        return (vl != null);
     }
 
     public int FindNum(String val) {
@@ -172,7 +126,7 @@ public class TgList extends HashMap implements Serializable {
 
     public String FindComment(String val) {
         String val_ = val.toUpperCase();
-        TgListEllement temp_ = find(val_);
+        Tag temp_ = find(val_);
         if (temp_ == null) {
             return "";
         }
@@ -181,7 +135,7 @@ public class TgList extends HashMap implements Serializable {
 
     public String FindUE(String val) {
         String val_ = val.toUpperCase();
-        TgListEllement temp_ = find(val_);
+        Tag temp_ = find(val_);
         if (temp_ == null) {
             return "";
         }
@@ -190,7 +144,7 @@ public class TgList extends HashMap implements Serializable {
 
     public double FindMin(String val) {
         String val_ = val.toUpperCase();
-        TgListEllement temp_ = find(val_);
+        Tag temp_ = find(val_);
         if (temp_ == null) {
             return 0;
         }
@@ -199,7 +153,7 @@ public class TgList extends HashMap implements Serializable {
 
     public double FindMax(String val) {
         String val_ = val.toUpperCase();
-        TgListEllement temp_ = find(val_);
+        Tag temp_ = find(val_);
         if (temp_ == null) {
             return 0;
         }
@@ -211,32 +165,32 @@ public class TgList extends HashMap implements Serializable {
         if (val >= size()) {
             return "";
         }
-        return ((TgListEllement) ObjList.get(val)).Comment;
+        return ((Tag) ObjList.get(val)).Comment;
     }
 
     public String getId(int val) {
         if (val >= size()) {
             return "";
         }
-        return String.valueOf(((TgListEllement) ObjList.get(val)).tgid);
+        return String.valueOf(((Tag) ObjList.get(val)).tgid);
     }
 
     public String getEU(int val) {
         if (val >= size()) {
             return "";
         }
-        return ((TgListEllement) ObjList.get(val)).EU;
+        return ((Tag) ObjList.get(val)).EU;
     }
 
     public String getName(int val) {
         if (val >= size()) {
             return "";
         }
-        return ((TgListEllement) ObjList.get(val)).Name;
+        return ((Tag) ObjList.get(val)).Name;
     }
 
-    public void assign(TgList val) {
-        TgListEllement temp_;
+    public void assign(TagList val) {
+        Tag temp_;
         if (val == null) {
             return;
         }
@@ -245,43 +199,10 @@ public class TgList extends HashMap implements Serializable {
         val.ObjList.clear();
         Iterator temp_iter = this.values().iterator();
         while (temp_iter.hasNext()) {
-            temp_ = ((TgListEllement) temp_iter.next());
+            temp_ = ((Tag) temp_iter.next());
             add(temp_);
         }
 
     }
 
-    /*public synchronized void Load() throws ImmiError.NoDBConnnection {
-
-     NL = new NormTable();
-     NL.Load();
-
-     Connection conn = null;
-     java.sql.Statement stmt = null;
-     ResultSet rset = null;
-     try {
-     try {
-     conn = ImmiDB.ImmConnect.getLocalConn("trend");
-     stmt = conn.createStatement();
-     rset = stmt.executeQuery("SELECT cod, iName, iComment, EU, logTime, mineu, maxeu  FROM trenddef");
-     while (rset.next()) {
-
-     TgListEllement temp = new TgListEllement(rset.getInt("cod"), rset.getString("iName"),
-     rset.getString("iComment"), rset.getString("EU"), rset.getDouble("mineu"), rset.getDouble("maxeu"), (int) rset.getFloat("logTime"));
-     add(temp);
-     }
-     } finally {
-     ImmiDB.ImmConnect.closeConn(conn, stmt, rset);
-     }
-     } catch (SQLException e) {
-     throw new ImmiError.NoTrenddefTable(e);
-     }
-
-     for (int i = 0; i < NL.size(); i++) {
-     ImmiDB.NormTable.UnitTable tempn = (ImmiDB.NormTable.UnitTable) NL.get(i);
-     String _tg = tempn.getName();
-     AddNorm(_tg, NL.getNorm(_tg));
-     }
-
-     }*/
 }
