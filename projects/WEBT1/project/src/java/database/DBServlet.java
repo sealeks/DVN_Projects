@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletContext;
+import javax.servlet.ServletConfig;
 
 import java.sql.*;
 import javax.naming.InitialContext;
@@ -27,9 +28,6 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import database.TagList;
-import javax.servlet.ServletConfig;
 
 /**
  *
@@ -50,8 +48,19 @@ public class DBServlet extends HttpServlet {
     private static int ERROR_PARSEREQ = 3;
     private static int ERROR_REQ = 4;
     private static int ERROR_DBREQ = 5;
+    private static int ERROR_NOCONTEXT = 5;
+
+    public static final long BOOST_TIMECONST = 210866803200000000L;
 
     private TagList tagList;
+
+    private long time_from_boost(long val) {
+        return (val - BOOST_TIMECONST) / 1000;
+    }
+
+    private long time_to_boost(long val) {
+        return val * 1000 + BOOST_TIMECONST;
+    }
 
     private Connection getConnection() {
         try {
@@ -122,6 +131,36 @@ public class DBServlet extends HttpServlet {
         TagList tst = getTags();
     }
 
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+        return "DB Servlet";
+    }
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -147,6 +186,7 @@ public class DBServlet extends HttpServlet {
             ArrayList requesttags = new ArrayList();
             Date start = null;
             Date stop = null;
+            String filter = "";
 
             try {
 
@@ -217,12 +257,14 @@ public class DBServlet extends HttpServlet {
                 case REQ_TRENDS:
                     proccessTrendsRequest(out, requesttags, start, stop);
                     break;
+                case REQ_JOURNAL:
+                    proccessJournalRequest(out, start, stop, filter);
+                    break;
                 default: {
                     proccessTagsRequest(out);
                     //proccessErrorRequest(out, errornum, errormessage);
                 }
             }
-
             out.close();
         } catch (IOException ei) {
             System.out.println(ei.getMessage());
@@ -240,38 +282,10 @@ public class DBServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
     private void proccessErrorResonse(PrintWriter out, int error, String mess) {
-
+        JSONObject result = new JSONObject();
+        result.put("error", error);
+        out.print(result.toString());
     }
 
     private void proccessTagsRequest(PrintWriter out) {
@@ -296,8 +310,51 @@ public class DBServlet extends HttpServlet {
             }
             result.put("tags", tags);
         } else {
-            result.put("error", "Not context");
+            result.put("error", ERROR_NOCONTEXT);
         }
+        out.print(result.toString());
+    }
+
+    private String prepareJournalRequest(Date start, Date stop, String filter) {
+        return "select * from journal102016";
+    }
+
+    private void proccessJournalRequest(PrintWriter out, Date start, Date stop, String filter) {
+
+        Connection conn = null;
+        Statement statement = null;
+        ResultSet rset = null;
+
+        JSONObject result = new JSONObject();
+
+        Connection connection = getConnection();
+
+        if (connection != null) {
+            try {
+                statement = connection.createStatement();
+                rset = statement.executeQuery(prepareJournalRequest(start, stop, filter));
+                JSONArray journal = new JSONArray();
+                while (rset.next()) {
+                    JSONObject row = new JSONObject();
+                    row.put("time", time_from_boost(rset.getLong("tm")));
+                    row.put("tag", rset.getString("itag"));
+                    row.put("text", rset.getString("icomment"));
+                    row.put("agroup", rset.getString("iagroup"));
+                    row.put("type", rset.getInt("itype"));
+                    row.put("level", rset.getInt("ilevel"));
+                    row.put("value", rset.getString("ival"));
+                    row.put("user", rset.getString("iuser"));
+                    row.put("host", rset.getString("ihost"));
+                    journal.add(row);
+                }
+                result.put("table", journal);
+            } catch (SQLException se) {
+                System.out.println(se.getMessage());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
         out.print(result.toString());
     }
 
@@ -305,14 +362,13 @@ public class DBServlet extends HttpServlet {
 
         Connection conn = null;
 
-        ServletContext sc = getServletContext();
-        TagList tagList = (TagList) sc.getAttribute("sessionTL");
+        TagList tagLst = getTags();
 
         try {
-            if (tagList != null) {
+            if (tagLst != null) {
                 JSONArray result = new JSONArray();
                 for (int i = 0; i < lst.size(); ++i) {
-                    TagList.Tag tg = tagList.find((String) lst.get(i));
+                    TagList.Tag tg = tagLst.find((String) lst.get(i));
                     if (tg != null) {
                         proccessTrendRequest(conn, result, tg, start, stop);
                     } else {
@@ -321,7 +377,7 @@ public class DBServlet extends HttpServlet {
                 out.print(result.toString());
                 return;
             }
-        } catch (java.lang.Exception e) {
+        } catch (Exception e) {
         } finally {
             try {
                 if ((conn != null) && (!conn.isClosed())) {
@@ -332,7 +388,7 @@ public class DBServlet extends HttpServlet {
         }
 
         JSONObject result = new JSONObject();
-        result.put("error", "Not context");
+        result.put("error", ERROR_NOCONTEXT);
 
     }
 
@@ -345,11 +401,6 @@ public class DBServlet extends HttpServlet {
         jsntag.put("cod", tg.getId());
 
         try {
-
-            if (conn == null) {
-                //conn = ImmiDB.ImmConnect.getLocalConn("trend");
-            }
-
             JSONArray data = new JSONArray();
 
             long lstart = start.getTime();
