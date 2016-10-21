@@ -38,8 +38,9 @@
                     });
                 }
                 else {
+                    if ($('#runmodal').dialog()){
                     $('#runmodal').dialog('close');
-                    $('#runmodal').dialog('destroy');
+                    $('#runmodal').dialog('destroy');}
                 }
             }
 
@@ -62,8 +63,9 @@
                 }
                 else {
                     $('#alerttext').html(msg);
+                    if ($('#runmodalalert').dialog()){                    
                     $('#runmodalalert').dialog('close');
-                    $('#runmodalalert').dialog('destroy');
+                    $('#runmodalalert').dialog('destroy');}
                 }
             }
 
@@ -98,8 +100,9 @@
 
             function  confirm_clear() {
                 $('#confirmtext').html('');
+                if ($('#dialog-confirm').dialog()) {
                 $('#dialog-confirm').dialog('close');
-                $('#dialog-confirm').dialog('destroy');
+                $('#dialog-confirm').dialog('destroy');}
             }
 
             function  conv_access(access) {
@@ -169,7 +172,7 @@
             }
 
             $(function () {
-
+                
                 var dialog, form,
                         name = $("#name"),
                         password = $("#password"),
@@ -226,15 +229,15 @@
                                     error_show('Ошибка добавления пользователя');
                             }
                             else {
-                                var newel = $("#users tbody").prepend("<tr>" +
+                                var newel = $("#users tbody").append("<tr>" +
                                         "<td>" + user + "</td>" +
                                         "<td><select class=" + '"' + "accselop" + '"' + " value=" + '"' +
-                                        conv_access(access) + '"' + 
+                                        conv_access(parseInt(access)) + '"' + 
                                         ">" + "</select></td>" +
                                         "<td><button class=" + '"' + "delbtn" + '"' + " onclick=" + '"' + 
                                         "deleteuser(this,'" + user + 
                                         "')" + '"' + "/>" + "</td>" +
-                                        "</tr>");
+                                        "</tr>").children().last();
                                 set_access_option(newel);
                                 $(".delbtn").button({
                                     text: false,
@@ -262,7 +265,7 @@
 
                 
                 access.val(1000);
-                set_access_option(access);
+                set_access_option();
                 access.selectmenu();
 
                 //window.alert(Date());
@@ -275,30 +278,32 @@
                     else {
                         if (event.list && event.list.length) {
                             for (var i = 0; i < event.list.length; i++) {
-                                $("#users tbody").append("<tr>" +
+                                var newel = $("#users tbody").append("<tr>" +
                                         "<td>" + event.list[i].name + "</td>" +
                                         "<td><select class=" + '"' + "accselop" + '"' + " value=" + '"' +
                                         conv_access(event.list[i].type) +
                                         '"' + ">" + "</select></td>" +
                                         "<td><button class=" + '"' + "delbtn" + '"' + " onclick=" + '"' +
                                         "deleteuser(this,'" + event.list[i].name + "')" + '"' + "/>" + "</td>" +
-                                        "</tr>");
-                            }                             
-                            $(".delbtn").button({
+                                        "</tr>").children().last();
+                            set_access_option(newel);  
+                            console.log('newel', newel);
+                            $(".delbtn", newel).button({
                                 text: false,
                                 label: "Удалить",
                                 icons: {
                                     primary: "ui-icon-close"
                                 }});
-                            set_access_option();
-                            $(".accselop", $("#users tbody")).selectmenu({
-                                        change: function(event, ui) {
-                                            var selel=ui.item.element.parent();
-                                            var trel=selel.parent().parent();
-                                            changeaccessuser(selel, $('td:first',trel).html());
-                                        }}
-                             ); 
-                            $('#access').selectmenu('refresh'); 
+                            
+                            $(".accselop", newel).selectmenu({
+                                                            change: function (event, ui) {
+                                                                var selel = ui.item.element.parent();
+                                                                var trel = selel.parent().parent();
+                                                                changeaccessuser(selel, $('td:first', trel).html());
+                                                            }}
+                                                        );
+                                                    }
+                            //access.selectmenu('refresh'); 
                             progress_show();
                         }
                     }

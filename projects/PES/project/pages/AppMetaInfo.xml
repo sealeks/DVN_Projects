@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<meta DBProvider="1" constring="host=videowall;database=trend;user=postgres;password=1324" host="">
-	<HomeList key="0">
-		<ReportArr />
-	</HomeList>
-	<TrendList key="0">
-            
-	</TrendList>
+<meta DBProvider="1" constring="host=videowall;database=trend;user=postgres;password=1324">
+    <HomeList key="0">
+        <ReportArr />
+    </HomeList>
+    <TrendList key="0">     
+    </TrendList>
     <ReportList>       
     </ReportList>    
-	<MessageList />
+    <MessageList />
 </meta>

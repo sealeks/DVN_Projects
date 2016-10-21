@@ -1343,7 +1343,7 @@
     <mlib:button id="button1" x="12" y="86" height="35" width="35" r="2" caption="2" onclick="formopen('screen2');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/>
     <mlib:button id="button3" x="1828" y="48" height="35" width="80" r="2" caption="Регистрация" onclick="formopen('registration');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/>
     <mlib:button id="button4" x="1830" y="80" height="35" width="80" r="2" caption="Упр. регистр." onclick="formopen('registrationman');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom" disable="" visible="access&gt;1000" dsblcolor1="" dsblcolor2="" dsblfontstyle="" state="" offfontstyle="fill: #333; font-size: 11px; "/>
-    <svg:text x="1909" y="25" text="text" fill="#5e5" id="text41" text-binding="(user=='') ? 'Незарегестрирован' : user" style="text-anchor: end;"/>
+    <svg:text x="1909" y="25" fill="#5e5" id="text41" text-binding="(user=='') ? 'Незарегестрирован' : user" style="text-anchor: end;"/>
     <elib:switcher x="33" y="132" height="30" width="30" id="switcher140" type="breakg" captionstyle="fill: yellow; stroke:none;" pos="jlog"/>
     
     <svg:text x="1639" y="26" text="Пользователь :" fill="gray" id="text235" style="font-size: 13" filter="" class="elec_f_txt" transform=""/>
