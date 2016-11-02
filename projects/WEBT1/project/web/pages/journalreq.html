@@ -37,21 +37,37 @@
             
 
             
-           function end_loaded_curr() {
-              window.journalcontroller.run();}            
-
+       
            function end_loaded_fn() {
               window.journalcontroller = new dbutil.journal_controller();
-              //window.journalcontroller.run(); 
-              setTimeout(end_loaded_curr, 1000);}
+              window.journalcontroller.onconneced =function(){
+                    window.journalcontroller.run();
+                   }
+              }
 
-            $(document).ready(function () {
+          $(function () {
                 
                  remoteutil.loader.attach(window.document);
                 //new dbutil.journal_controller();
-                setTimeout(end_loaded_fn, 100);
+                setTimeout(end_loaded_fn, 10);
                 if (this.documentElement)
                 libutil.set_Title(this.documentElement);
+            
+                window.messagecontroller = function(message) {
+                    if (message) {
+                        switch(message){
+                            case 'run': {
+                                    if (window.journalcontroller)
+                                        window.journalcontroller.setNow();
+                                    break;
+                            }
+                            default:{
+                                    
+                            }
+                        }
+                    }
+                    console.log('recieved message: ', message);
+                }
            });
             
 
@@ -72,10 +88,10 @@
         </div>         
         <div class="ui-layout-north" id="top-menuemain">
             <div id="toolbar" class="ui-widget-header">
-                <!--button id="select-button">Выбор</button>
+                <button id="select-button">Выбор</button>
                 <button id="nomessage-button">Скинуть все</button>                
                 <button id="allmessage-button">Выбрать все</button>
-                <span class="toolbar-delimeter-space" style="width: 30px;"></span-->
+                <span class="toolbar-delimeter-space" style="width: 30px;"></span>
                 <button id="run-button" title="Запрос">Запрос</button>
 
                 <span class="toolbar-delimeter-space" style="width: 10px;"></span>

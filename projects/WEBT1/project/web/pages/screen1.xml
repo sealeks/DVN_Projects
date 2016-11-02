@@ -1337,7 +1337,7 @@
     <elib:switcher id="polygon12dbl" x="1087" y="313" width="25" height="25" environment="kU10" type="disconnector" rotate="90" pos="rztp162" header="Р ТП 165" initstate="on"/>
     
     <elib:switcher id="polygon89932dbl" x="1172" y="167" width="25" height="25" environment="kU10" type="breaker" initstate="off" header="ВН88" pos="vn88"/>
-    <mlib:button id="button2" x="10" y="50" height="35" width="80" r="2" caption="Журнал" onclick="formclose('journal');formopen('journal1');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/>
+    <mlib:button id="button2" x="10" y="50" height="35" width="80" r="2" caption="Журнал" onclick="formclose('journal');formopen('journal1');formmessage('journal1','run');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/>
     <mlib:button id="button0" x="9" y="9" height="30" width="80" r="2" caption="Выход" onclick="exit();" color1="#F00" color2="#A00" fontstyle="fill: white; font-size: 12px; font-weight: bold;" kind="red"/>
     <elib:path stroke-width="3" d=" M1343,288 l 100,100 l -100, 50" stroke="#e00" id="path0" filter="filter2"/>
     <mlib:button id="button1" x="12" y="86" height="35" width="35" r="2" caption="2" onclick="formopen('screen2');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/>
@@ -1502,4 +1502,4 @@
     <elib:switcher id="polygon32" x="1729" y="264" width="25" height="25" environment="kU10" type="station" header="ТП267" pos="tp267"/>
     <elib:eline id="line67" x1="1645" x2="1694" y1="278" y2="278" environment="kU10" state="1" stroke-width="2"/>
     <elib:eline id="line68" x1="1717" x2="1731" y1="277" y2="277" environment="kU10" state="1" stroke-width="2"/>
-</svg:svg>
+<mlib:sensor x="826" y="76" height="30" width="80" stroke="white" stroke-width="1" r="4" id="sensor0" param="tst" sensorevent="graph" format="%2.0f" fontcolor="blue" fontstyle="bold" gradient-type="tb" environment="gaz"/></svg:svg>

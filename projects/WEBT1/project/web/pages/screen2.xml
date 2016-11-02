@@ -1589,7 +1589,7 @@
     <svg:rect x="1828" y="127" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect0"/>
     <svg:rect x="1828" y="47" width="90" height="75" fill="#444" stroke="#eee" stroke-width="1" id="rect1"/>
     <svg:rect x="1828" y="2" width="90" height="40" fill="#444" stroke="#eee" stroke-width="1" id="rect2"/>
-    <mlib:button id="button0" x="1833" y="48" height="35" width="80" r="2" caption="Журнал" onclick="formclose('journal1');formopen('journal');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/>
+    <mlib:button id="button0" x="1833" y="48" height="35" width="80" r="2" caption="Журнал" onclick="formclose('journal1');formopen('journal');formmessage('journal','run');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/>
     <mlib:button id="button1" x="1832" y="7" height="30" width="80" r="2" caption="Выход" onclick="exit();" color1="#F00" color2="#A00" fontstyle="fill: white; font-size: 12px; font-weight: bold;" kind="red"/>
     <mlib:button id="button3" x="1833" y="82" height="35" width="80" r="2" caption="Экран 3" onclick="formopen('screen3');" color1="#555" color2="#777" fontstyle="fill: white; font-size: 11px; font-weight: bold;" kind="custom"/>
     <elib:switcher x="1856" y="130" height="30" width="30" id="switcher28" type="breakg" captionstyle="fill: yellow; stroke:none;" pos="jlog"/>

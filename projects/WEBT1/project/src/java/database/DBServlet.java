@@ -7,7 +7,9 @@ package database;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -115,13 +117,16 @@ public class DBServlet extends HttpServlet {
                 }
                 tagList = tmpList;
                 getServletContext().setAttribute("tagList", tagList);
+                connection.close();
+                statement = null;
+                rset = null;                
                 return tagList;
             } catch (SQLException se) {
                 System.out.println(se.getMessage());
             } catch (Exception e) {
                 System.out.println(e.getMessage());
+                }
             }
-        }
         return null;
     }
 
@@ -314,9 +319,30 @@ public class DBServlet extends HttpServlet {
         }
         out.print(result.toString());
     }
+    
+    private String monthJrnlName(Date dt) {
+        Calendar cl = new GregorianCalendar();
+        cl.setTime(dt);
+        String mnth = Integer.toString(cl.get(Calendar.MONTH)+1);
+        if (mnth.length()==1)
+            mnth ="0" + mnth;
+        return "journal" + mnth + Integer.toString(cl.get(Calendar.YEAR));
+    }    
 
     private String prepareJournalRequest(Date start, Date stop, String filter) {
-        return "select * from journal102016";
+        //return "select * from journal112016  order by tm desc";
+        String startS=monthJrnlName(start);
+        String stopS=monthJrnlName(stop);
+        if (startS == stopS) {
+            return "select * from " + startS + " where tm>=" + 
+                    time_to_boost(start.getTime()) + " and tm<=" +  
+                    time_to_boost(stop.getTime()) + " order by tm desc";
+        } else {
+            return "select * from " + startS +  " where tm>=" + 
+                    time_to_boost(start.getTime()) + " union select * from " + 
+                    stopS + " where tm<=" +  
+                    time_to_boost(stop.getTime()) + " order by tm desc";
+        }
     }
 
     private void proccessJournalRequest(PrintWriter out, Date start, Date stop, String filter) {
@@ -332,7 +358,8 @@ public class DBServlet extends HttpServlet {
         if (connection != null) {
             try {
                 statement = connection.createStatement();
-                rset = statement.executeQuery(prepareJournalRequest(start, stop, filter));
+                String reqStr = prepareJournalRequest(start, stop, filter);
+                rset = statement.executeQuery(reqStr);
                 JSONArray journal = new JSONArray();
                 while (rset.next()) {
                     JSONObject row = new JSONObject();
@@ -348,6 +375,9 @@ public class DBServlet extends HttpServlet {
                     journal.add(row);
                 }
                 result.put("table", journal);
+                connection.close();
+                statement = null;
+                rset = null;
             } catch (SQLException se) {
                 System.out.println(se.getMessage());
             } catch (Exception e) {
@@ -357,6 +387,18 @@ public class DBServlet extends HttpServlet {
 
         out.print(result.toString());
     }
+    
+    private String monthTrendName(Date dt) {
+        Calendar cl = new GregorianCalendar();
+        cl.setTime(dt);
+        String day = Integer.toString(cl.get(Calendar.DAY_OF_MONTH)+1);
+        if (day.length()==1)
+            day ="0" + day;        
+        String mnth = Integer.toString(cl.get(Calendar.MONTH)+1);
+        if (mnth.length()==1)
+            mnth ="0" + mnth;
+        return "trend" + day + mnth + Integer.toString(cl.get(Calendar.YEAR));
+    }     
 
     private void proccessTrendsRequest(PrintWriter out, ArrayList lst, Date start, Date stop) {
 
@@ -411,38 +453,38 @@ public class DBServlet extends HttpServlet {
 
             while (lstop >= lstart) {
 
-                /*  String tn = Immi.DateUtil.getNameTable(lstart, "tr");
+                String tn = monthTrendName(new Date(lstart));
 
 
-                 boolean double_req = (tn != Immi.DateUtil.getNameTable(lstart + inc, "tr"));
+                boolean double_req = (tn != monthTrendName(new Date(lstart + inc)));
 
-                 for (int i = 0; i < 2; i++) {
+                for (int i = 0; i < 2; i++) {
 
-                 String query = "SELECT tm, val FROM " + tn + " WHERE ((cod=" + tg.getId() +
-                 ") and ((tm>='" + Immi.DateUtil.TimeToDT(lstart) + "') and (tm<='" +
-                 Immi.DateUtil.TimeToDT(lstop) + "'))) ORDER BY tm ASC ";
-                 try {
-                 rset = stmt.executeQuery(query);
-                 while (rset.next()) {
-                 JSONArray point = new JSONArray();
-                 Timestamp ts = rset.getTimestamp("tm");
-                 point.add(ts.getTime());
-                 if (rset.getObject("val") != null) {
-                 point.add(rset.getObject("val"));
-                 } else {
-                 point.add("");
-                 }
-                 data.add(point);
-                 }
-                 } catch (java.sql.SQLException exp) {
-                 } finally {
-                 }
-                 if (double_req) {
-                 tn = Immi.DateUtil.getNameTable(lstart + inc, "tr");
-                 } else {
-                 break;
-                 }
-                 }*/
+                    String query = "SELECT tm, val FROM " + tn + " WHERE ((cod=" + tg.getId()
+                            + ") and ((tm>='" + time_to_boost(lstart) + "') and (tm<='"
+                            + time_to_boost(lstop) + "'))) ORDER BY tm ASC ";
+                    try {
+                        rset = stmt.executeQuery(query);
+                        while (rset.next()) {
+                            JSONArray point = new JSONArray();
+                            Timestamp ts = rset.getTimestamp("tm");
+                            point.add(ts.getTime());
+                            if (rset.getObject("val") != null) {
+                                point.add(rset.getObject("val"));
+                            } else {
+                                point.add("");
+                            }
+                            data.add(point);
+                        }
+                    } catch (java.sql.SQLException exp) {
+                    } finally {
+                    }
+                    if (double_req) {
+                        tn = monthTrendName(new Date(lstart + inc));
+                    } else {
+                        break;
+                    }
+                }
                 lstart += inc;
 
             }
